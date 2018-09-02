@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml" />
+
+
+
+  <meta name="keywords" content="CPU," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="&amp;emsp;&amp;emsp;众所周知智能产品都有中央处理器进行逻辑运算和控制处理，比如电脑、平板、手机、路由器、电话手表、智能汽车等电子产品。比较熟悉的电脑处理器有AMD和Intel，而随着X86架构的CPU淘汰，如IBM、Cyrix、IDT、VIA（台湾）等电脑CUP厂家逐渐退出市场，AMD和Intel两家独大，中国的龙芯处理器目前性能还很差。而手机处理器厂家众多，依靠于ARM架构的技术授权，让更多">
+<meta name="keywords" content="CPU">
+<meta property="og:type" content="article">
+<meta property="og:title" content="手机处理器">
+<meta property="og:url" content="https://jacktaoz.github.io/2018/08/12/手机处理器/index.html">
+<meta property="og:site_name" content="Jacktao&#39;s Blog">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;众所周知智能产品都有中央处理器进行逻辑运算和控制处理，比如电脑、平板、手机、路由器、电话手表、智能汽车等电子产品。比较熟悉的电脑处理器有AMD和Intel，而随着X86架构的CPU淘汰，如IBM、Cyrix、IDT、VIA（台湾）等电脑CUP厂家逐渐退出市场，AMD和Intel两家独大，中国的龙芯处理器目前性能还很差。而手机处理器厂家众多，依靠于ARM架构的技术授权，让更多">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/RTX%E6%88%AA%E5%9B%BE%E6%9C%AA%E5%91%BD%E5%90%8D.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/112iphone.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/GPU.jpg">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/113watch1.jpeg">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/%E9%AB%98%E9%80%9A%E9%AA%81%E9%BE%99.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/114%E8%81%94%E5%8F%91%E7%A7%91%EF%BC%88MTK%EF%BC%89.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/115%E4%B8%89%E6%98%9FExynos%EF%BC%88%E7%8C%8E%E6%88%B7%E5%BA%A7.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/157%E6%B5%B7%E6%80%9D%E9%BA%92%E9%BA%9F.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/157%E5%BE%B7%E5%B7%9E%E4%BB%AA%E5%99%A8.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/157%E8%8B%B1%E4%BC%9F%E8%BE%BE.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/157%E6%9D%BE%E6%9E%9C.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/157%E5%B1%95%E8%AE%AF.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/157%E5%B1%95%E8%AE%AF%E8%8A%AF%E7%89%87.png">
+<meta property="og:updated_time" content="2018-09-02T06:48:48.805Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="手机处理器">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;众所周知智能产品都有中央处理器进行逻辑运算和控制处理，比如电脑、平板、手机、路由器、电话手表、智能汽车等电子产品。比较熟悉的电脑处理器有AMD和Intel，而随着X86架构的CPU淘汰，如IBM、Cyrix、IDT、VIA（台湾）等电脑CUP厂家逐渐退出市场，AMD和Intel两家独大，中国的龙芯处理器目前性能还很差。而手机处理器厂家众多，依靠于ARM架构的技术授权，让更多">
+<meta name="twitter:image" content="http://pdfyq8fr4.bkt.clouddn.com/RTX%E6%88%AA%E5%9B%BE%E6%9C%AA%E5%91%BD%E5%90%8D.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://jacktaoz.github.io/2018/08/12/手机处理器/"/>
+
+
+
+
+
+  <title>手机处理器 | Jacktao's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jacktao's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">出走半生，仍是少年</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jacktaoz.github.io/2018/08/12/手机处理器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jacktao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jacktao's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">手机处理器</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-12T21:12:56+08:00">
+                2018-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Mobile-Phone-Processor/" itemprop="url" rel="index">
+                    <span itemprop="name">Mobile Phone Processor</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>&emsp;&emsp;众所周知智能产品都有中央处理器进行逻辑运算和控制处理，比如电脑、平板、手机、路由器、电话手表、智能汽车等电子产品。比较熟悉的电脑处理器有AMD和Intel，而随着X86架构的CPU淘汰，如IBM、Cyrix、IDT、VIA（台湾）等电脑CUP厂家逐渐退出市场，AMD和Intel两家独大，中国的龙芯处理器目前性能还很差。而手机处理器厂家众多，依靠于ARM架构的技术授权，让更多人有参与竞争的条件。大部分电子产品主要使用手机、电脑、平板的处理器，处理器芯片型号众多，性能各不相同，设计一款产品的时候依据需要的资源进行选型，在资源、稳定性、成本上进行综合考虑。</p>
+<a id="more"></a>
+<p>&emsp;&emsp;以手机芯片平台相关的为例汇总学习：芯片厂家、芯片系列、处理器架构、优缺点、综合性能对比。首先介绍几个专业的CPU性能介绍网站：</p>
+<p>&emsp;&emsp;<a href="http://www.mydrivers.com/zhuanti/tianti/01/" target="_blank" rel="noopener">手机CPU性能天梯图</a></p>
+<p>&emsp;&emsp;<a href="http://mobile.zol.com.cn/soc/" target="_blank" rel="noopener">手机综合性能天梯图</a></p>
+<p>&emsp;&emsp;目前手机处理器比较主流的厂家：苹果A系列，高通（骁龙），联发科（MTK），三星Exynos（猎户座），华为海思麒麟。退居二线的厂家有：德州仪器（TI），英特尔（Intel），英伟达（Nvidia），展讯，松果（合并大唐联芯科技）。其次在平板、路由器、车载行业使用比较多的厂家有：美满（marvell）、博通（Broadcom）、瑞芯微（RK）、晶晨（Amlogic）、全志科技、Mstar等。</p>
+<h4 id="emsp-emsp-苹果A系列"><a href="#emsp-emsp-苹果A系列" class="headerlink" title="&emsp;&emsp;苹果A系列"></a>&emsp;&emsp;苹果A系列</h4><p>&emsp;&emsp;苹果的处理器只使用在自家的iPhone、iPad、手表等设备上，A系列处理器向来都是非常强悍的，在安卓手机四核八核满天飞的时候，苹果依旧是双核，并且主频也没有安卓的高。得益于苹果把每个独立的内核设计的很强，每个内核的晶体管数量都非常多，晶体管数量越多性能也就越强，所以苹果A系列的处理器双核为什么比安卓四核要更强。但从A10芯片之后进化到四核，采用big. LITTLE大小核的架构。</p>
+<p>&emsp;&emsp;苹果芯片A系列：A4/A5/A5X/A6/A6X/A7/A8/A8X/A9/A9X/A10/A11</p>
+<p>&emsp;&emsp; A系列是<strong>精简指令集ARM架构</strong>，对一些简单的指令有优化，在处理相对简单的任务就可以做到低功耗地完成任务。在安卓阵营进入到四核时代的时候，考虑到功耗的问题，就开始使用<strong>big.LITTLE的大小核架构</strong>，苹果从A9芯片的14/16nm制程双核心进化到A10 Fusion芯片的四核心，并且采用类似于安卓阵营big.LITTLE大小核的架构，想必是在相同制程下无法完美平衡更强的性能与功耗，但是又有些许区别。</p>
+<p>&emsp;&emsp; 优点：业界领先的CPU技术、性能出色、可靠性高，缺点：仅用于自家产品上，产品价格贵，大众用户基本绝缘。</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/RTX%E6%88%AA%E5%9B%BE%E6%9C%AA%E5%91%BD%E5%90%8D.png" alt="A9" title="苹果CPU"></p>
+<p>&emsp;&emsp;近几年来，苹果一直有条不紊地在为iPhone、iPad、Mac、Apple-Watch甚至AirPods设计越来越多的芯片，这除了为用户提供了更优秀的体验之外，也体现出了苹果在自主芯片道路上，走得越发的稳健。</p>
+<p>&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/112iphone.png" alt="苹果" title="苹果"></p>
+<p>&emsp;&emsp;除了性能再次独占鳌头之外，A11 还是目前为止苹果自主程度最高的一代。当中包括自主的 GPU、自主的 ISP，还有自主的解码器等。当然还有苹果的第一块<strong>AI芯片「神经网络引擎」</strong>，而这些也是苹果的自主芯片之路走到现在，交出的最新答卷。<br>&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/GPU.jpg" alt="A11" title="AI芯片"></p>
+<p>&emsp;&emsp;除了在手机上，苹果还在自家的其他产品上逐步地添加自己的芯片，比<strong>如Apple </strong>Watch上的S系列芯片<strong><strong>以及</strong></strong>无线蓝牙芯片W系列<strong>**，还有目前已搭载在MacBookPro和iMacPro上的</strong>T系列芯片**等。苹果似乎要将自主芯片遍布到整个产品版图上。</p>
+<p>&emsp;&emsp;&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/113watch1.jpeg" alt="Watch" title="Apple watch "></p>
+<h4 id="emsp-emsp-高通（骁龙）"><a href="#emsp-emsp-高通（骁龙）" class="headerlink" title="&emsp;&emsp;高通（骁龙）"></a>&emsp;&emsp;高通（骁龙）</h4><p>&emsp;&emsp;美国高通公司是全球3G、4G与下一代无线技术的领军企业，并致力于引领全球5G之路。移动行业与相邻行业重要的创新推动者。30多年来，高通的创想和创新推动了数字通信的演进，将各地的人们与信息、娱乐和彼此之间更紧密地联系在一起。目前已经向全球100多位制造商提供技术使用授权，涉及了世界上所有电信设备和消费电子设备的品牌。</p>
+<p>&emsp;&emsp;高通处理器在手机CPU中属于行业领导者地位，是高端、高性能、高兼容性的代名词。基本上大多数手机厂家的旗舰机都是采用高通的处理器，从国际厂家到国产厂家，比如小米、一加、努比亚、乐视、酷派、索尼、LG等都是用高通处理器，得益于高通的市场占有量非常高，很多软件开发商往往会更倾向于兼容高通处理器的平台。</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/%E9%AB%98%E9%80%9A%E9%AA%81%E9%BE%99.png" alt="高通骁龙" title="高通骁龙 "></p>
+<p>&emsp;&emsp;高通芯片型号很多：骁龙S1/2/3/4，骁龙200系列，骁龙400系列，高通600系列，高通800系列，目前最新的为骁龙845。经典芯片有MSM8096，MSM8974(aa,ab,ac)，210系列，410系列（MSM8916），高通615（MSM8939），高通805(32位的），高通808（MSM8992），高通810（MSM8994）等。</p>
+<p>&emsp;&emsp;Qualcomm此前的32位骁龙芯片大都采用自主微架构，<strong>最初的MSM8250开始使用Scorpion微架构</strong>；而在过去的三年中，Qualcomm则一直在使用<strong>Krait架构</strong>，<strong>这个架构是基于ARM架构上的二次开发</strong>。骁龙810就是直接采用的ARM Cortex-A57/A53核心。进入64位时代后，Qualcomm推出的芯片开始采用ARM标准架构，如骁龙615采用ARM Cortex-A53处理器，骁龙810则采用ARM Cortex-A57+A53，骁龙620和618采用ARM Cortex-A72。</p>
+<p>&emsp;&emsp;之后高通自主研发的芯片架构，发布的骁龙820这款备受业界关注的移动处理器，集成了Qualcomm首款定制设计的64位Kryo CPU。值得一提的是<strong>，Qualcomm还会带来一款骁龙815芯片，它采用big.LITTLE架构</strong>，由四个TS1核心与四个TS2核心组成。<strong>骁龙820集成Adreno 530 GPU 和Hexagon 680 DSP</strong>，他们将和Kryo CPU一起构筑骁龙820之异构计算“铁三角”。所<strong>谓异构计算，即骁龙820将调度组合SoC不同的功能性内核</strong>，例如CPU、GPU和DSP内核，对比起使用同一内核处理不同任务，实现前所未有的性能和省电表现。</p>
+<p>&emsp;&emsp;从技术角度来看，异构计算是Qualcomm致胜移动行业的战略支柱之一。换个角度说，Qualcomm正致力于打造最一流的组件，这些组件包括CPU、GPU、DSP、多种连接引擎、多种多媒体引擎、摄像头引擎、显示器引擎、导航和传感器核心，Qualcomm的战略不仅涉及这些单独的模块，还将这些模块聪明地绑定在一起。真正的异构计算架构使CPU、GPU、DSP和多媒体子系统以及相机ISP等其他专用核心能够更有效地协同合作，与单单依靠CPU相比，性能更高，功耗更低，从而为搭载骁龙处理器的终端带来更好的用户体验。</p>
+<p>&emsp;&emsp;优点：主频高，数据处理性能表现出色，拥有最广泛的产品路线图，支持包括智能手机、平板电脑、智能电视等各类终端，可以支持所有主流移动操作系统，支持3G/4G网络制式；缺点：功能耗较大。</p>
+<h4 id="emsp-emsp-联发科（MTK）"><a href="#emsp-emsp-联发科（MTK）" class="headerlink" title="&emsp;&emsp;联发科（MTK）"></a>&emsp;&emsp;联发科（MTK）</h4><p>&emsp;&emsp;MTK是台湾联发科技的手机处理器，是全球著名IC设计厂商，专注于无线通讯及数字多媒体等技术领域。其提供的芯片整合系统解决方案，包含无线通讯、高清数字电视、光储存、DVD及蓝光等相关产品。</p>
+<p>&emsp;&emsp;早期MTK的芯片性能都平平，大多数都是国产一些山寨手机采用，因为价格低，并且可以提供一整块主板，所以得到山寨厂家的青睐，只要手机厂家设计外壳就可以生产一部手机了。而如今的MTK已经今非昔比了，如今联发科的芯片性能已经跟上一流水准，并且在功耗和性能有一个很好的平衡点，基本都能够满足手机的日常需求。</p>
+<p>&emsp;&emsp;联发科主要有<strong>入门级MT系列和曦力Helio—P系列和曦力Helio—X系列</strong>，2017年，联发科所押宝采用10nm制程的旗舰处理器Helio—X30却由于在工艺、性能方面大幅跃进导致产能上出了不小的问题，所以不得不把精力转移到主流中端上：目前旗舰的是MT6797，64位的有MT6797，MT6752,MT6753，MT6735等，32位的是MT6795。Helio系列并不出色，大部分应用于中端手机上。<a href="https://www.pc841.com/shoujizhishi/87617_all.html" target="_blank" rel="noopener">联发科处理器性能参数</a></p>
+<p>&emsp;&emsp;联发科是基于ARM架构Cortex-A7/15/53/72集成开发的。</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/114%E8%81%94%E5%8F%91%E7%A7%91%EF%BC%88MTK%EF%BC%89.png" alt="MTK" title="MTK"></p>
+<h4 id="emsp-emsp-三星Exynos"><a href="#emsp-emsp-三星Exynos" class="headerlink" title="&emsp;&emsp;三星Exynos"></a>&emsp;&emsp;三星Exynos</h4><p>&emsp;&emsp;Exynos是三星目前所有处理器的前缀，也可以说是一个总称。<strong>猎户座CPU是三星自主研发的CPU</strong>，各项指标都很靠前，属于一流顶级CPU，性能非常出众，屏幕色彩艳丽，CPU和GPU指标优秀，整机性能非常出众。经常搭载在三星自家旗舰手机上，三星S8搭载的是旗舰处理器8895。<strong>猎户座仅指Exynos4210，也就是GalaxyS2上的那颗处理器</strong>。<strong>蜂鸟（Hummingbird）仅指三星S5PC110（后更名Exynos 3110）处理器</strong>，<strong>也就是Galaxy S和iPhone 4上的那颗处理器</strong>。<strong>三星还有武仙座、飞马座、水星等众多处理器</strong>。</p>
+<p>&emsp;&emsp;三星芯片主要Exynos+系列，国内常见的就是Exynos7420，Exynos5430，Exynos4412，最新的Exynos9810，安卓阵营最强的SOC，其采用四核心猫鼬M3定制架构+四核心A55组成：<a href="http://mobile.zol.com.cn/674/6741670_all.html" target="_blank" rel="noopener">详细参数</a>。Exynos系列处理器主要应用在智能手机和平板电脑等移动终端上。Exynos绝大多数只用在三星Galaxy系列产品，除了魅族以外很少有其它厂商采用。</p>
+<p>&emsp;&emsp;自主研发及生产的SoC、基于ARM架构的处理器。<a href="https://zh.wikipedia.org/wiki/三星Exynos" target="_blank" rel="noopener">Exynos系列参数</a></p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/115%E4%B8%89%E6%98%9FExynos%EF%BC%88%E7%8C%8E%E6%88%B7%E5%BA%A7.png" alt="三星芯片" title="三星芯片"></p>
+<h4 id="emsp-emsp-海思麒麟"><a href="#emsp-emsp-海思麒麟" class="headerlink" title="&emsp;&emsp;海思麒麟"></a>&emsp;&emsp;海思麒麟</h4><p>&emsp;&emsp;海思是华为旗下半导体业务，致力于研发SoC网络监控芯片及解决方案、可视电话芯片及解决方案、DVB芯片及解决方案和IPTV芯片及解决方案，也就说做处理器的。而开始用于手机上是<strong>海思K3V2</strong>，是2012年业界体积最小的四核A9架构处理器。他是一款高性能CPU，主频分为1.2GHz和1.5GHz，是华为自主设计，采用ARM架构40nm、64位内存总线，是英伟达Tegra 3内存总线的两倍。</p>
+<p>&emsp;&emsp;海思同时也是值得我们骄傲的企业，在今年，华为推出的华为mate9上就是采用海思麒麟系列高端处理器<strong>麒麟960</strong>，这款芯片在性能、功耗都已经达到顶尖水平，也代表着国产芯片的实力，得到国内外很多媒体以及专业机构的认可，着实值得表扬，赞一个。</p>
+<p>&emsp;&emsp;海思麒麟920到最新的980。麒麟970拥有神经网络单元，采用19纳米和骁龙845性能差不多。海思麒麟也是基于ARM的架构设计。</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/157%E6%B5%B7%E6%80%9D%E9%BA%92%E9%BA%9F.png" alt="海思麒麟" title="海思麒麟"></p>
+<h4 id="emsp-emsp-德州仪器（TI）"><a href="#emsp-emsp-德州仪器（TI）" class="headerlink" title="&emsp;&emsp;德州仪器（TI）"></a>&emsp;&emsp;德州仪器（TI）</h4><p>&emsp;&emsp;美国德州仪器公司（英语：Texas Instruments，简称：TI），是世界上最大的模拟电路技术部件制造商，全球领先的半导体跨国公司，以开发、制造、销售半导体和计算机技术闻名于世，主要从事创新型数字信号处理与模拟电路方面的研究、制造和销售。除半导体业务外，还提供包括传感与控制、教育产品和数字光源处理解决方案。换句话来说，德州仪器也是做CPU的。</p>
+<p>&emsp;&emsp;采用过德州仪器处理器的手机有摩托罗拉XT910（DROID RAZR）、三星I9250（Galaxy-Nexus）、华为U9200（Ascend P1）等，其实德州仪器在当时还是很不错的，只是由于市场的侧重不同，被高通反超，最终壮士断腕，果断定制了移动处理器的研发。</p>
+<p>&emsp;&emsp;德州仪器处理器OMAP4/3/2/1系列</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/157%E5%BE%B7%E5%B7%9E%E4%BB%AA%E5%99%A8.png" alt="德州仪器" title="德州仪器"></p>
+<h4 id="emsp-emsp-英伟达（Nvidia）"><a href="#emsp-emsp-英伟达（Nvidia）" class="headerlink" title="&emsp;&emsp;英伟达（Nvidia）"></a>&emsp;&emsp;英伟达（Nvidia）</h4><p>&emsp;&emsp;NVIDIA（全称为NVIDIA Corporation，NASDAQ：NVDA，官方中文名称英伟达），创立于1993年1月，主要是做显卡GPU。在2013年小米3上面搭载的NVIDIA Tegra4处理器被媒体等关注，但是由于NVIDIA Tegra4这款处理器的兼容性不稳定，安卓的部分软件常常出现闪退、卡顿，导致人们对这款处理器的体验大打折扣，也是小米3的一个槽点，后面在手机端市场也渐渐落寞了。</p>
+<p>&emsp;&emsp;先后推出Tegra X1 Tegra K1 Tegra 4/3/2等系列芯片。</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/157%E8%8B%B1%E4%BC%9F%E8%BE%BE.png" alt="英伟达" title="英伟达"></p>
+<h4 id="emsp-emsp-松果"><a href="#emsp-emsp-松果" class="headerlink" title="&emsp;&emsp;松果"></a>&emsp;&emsp;松果</h4><p>&emsp;&emsp;是继华为后国产第二家拥有研发处理器能力的手机厂家，是小米旗下全资子公司。相比大家多少也有些了解了，松果在今年3月分布了首款八核处理器<strong>澎湃S1</strong>，采用28nm制程，，并搭载在自家最新发布的小米5C上，根据各大媒体评测，这款手机在功耗和性能的表型达到了高通625的级别，对于一款新生CPU来说着实不容易，目前仅支持移动4G，但是根据雷布斯在发布会上强调后期可以用个软件升级的形式来支持联通4G，而且网上已经有教程了，已经购买的用户就不用担心使用联通卡的问题。</p>
+<p>&emsp;&emsp;澎湃芯片是大唐电信旗下<strong>联芯开发的产品</strong>，由于大唐电信不生产手机，所以开发出来的芯片没有市场，于是便联合小米，大唐这边提供技术和专利保障，小米负责手机供应与适配。澎湃S1采用八核64位处理器，拥有28nm工艺制程，包含四个2.2GHz主频A53内核以及四个1.4GHz主频A53内核，GPU为四核Mali-T860。由于同时加入了图像压缩技术，可以减少内存带宽占用。</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/157%E6%9D%BE%E6%9E%9C.png" alt="松果" title="松果"></p>
+<h4 id="emsp-emsp-展讯"><a href="#emsp-emsp-展讯" class="headerlink" title="&emsp;&emsp;展讯"></a>&emsp;&emsp;展讯</h4><p>&emsp;&emsp;展讯通信致力于智能手机、功能型手机及其他消费电子产品的手机芯片平台开发，产品支持2G、3G及4G无线通讯标准。基于高集成度、高效能的芯片，搭配客户化的软件及参考方案，展讯可提供完整的交钥匙平台方案，帮助客户实现更快的设计周期，并有效降低开发成本。展讯的客户涵盖全球及中国本土制造商，可为中国及全球新兴市场的消费者提供卓越的手机产品。<a href="http://www.spreadtrum.com/cn/solutions.html" target="_blank" rel="noopener">[展现官网]</a></p>
+<p>&emsp;&emsp;展讯芯片主要包括：SC6xxx.SC7xxx及SC9xxx三大系列。SC6xxx系列 GSM/GPRS多媒体基带芯片，SC7xxx 系列GSM/GPRS/EDGE多媒体娱乐基带芯片，SC9xx系列LTE/TD-SCDMA/GSM/GPRS双模多媒体基带芯片。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/157%E5%B1%95%E8%AE%AF.png" alt="展讯" title="展讯"></p>
+<p>&emsp;&emsp;目前展讯最新的4G芯片如下：<br>&emsp;&emsp;&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/157%E5%B1%95%E8%AE%AF%E8%8A%AF%E7%89%87.png" alt="展讯4G芯片" title="展讯4G芯片"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CPU/" rel="tag"># CPU</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/11/你好，未来/" rel="next" title="你好，未来">
+                <i class="fa fa-chevron-left"></i> 你好，未来
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/25/射频基本概念/" rel="prev" title="射频基本概念">
+                射频基本概念 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/logo.jpg"
+                alt="Jacktao" />
+            
+              <p class="site-author-name" itemprop="name">Jacktao</p>
+              <p class="site-description motion-element" itemprop="description">zhangt@dw.gdbbk.com</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-苹果A系列"><span class="nav-number">1.</span> <span class="nav-text">  苹果A系列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-高通（骁龙）"><span class="nav-number">2.</span> <span class="nav-text">  高通（骁龙）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-联发科（MTK）"><span class="nav-number">3.</span> <span class="nav-text">  联发科（MTK）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-三星Exynos"><span class="nav-number">4.</span> <span class="nav-text">  三星Exynos</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-海思麒麟"><span class="nav-number">5.</span> <span class="nav-text">  海思麒麟</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-德州仪器（TI）"><span class="nav-number">6.</span> <span class="nav-text">  德州仪器（TI）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-英伟达（Nvidia）"><span class="nav-number">7.</span> <span class="nav-text">  英伟达（Nvidia）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-松果"><span class="nav-number">8.</span> <span class="nav-text">  松果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-展讯"><span class="nav-number">9.</span> <span class="nav-text">  展讯</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">true</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
