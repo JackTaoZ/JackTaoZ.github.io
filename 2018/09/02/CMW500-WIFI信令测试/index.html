@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml" />
+
+
+
+  <meta name="keywords" content="CMW500," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="简介&amp;emsp;&amp;emsp; CMW500仿真WLAN AP（SSID:CMW-AP）功能，手机作为用户终端接入该 AP，由 CMW500 完成手机发射和接收性能的测试。这里以 802.11b/g 1/7/13 信道为例，讲解WLAN信令测试的仪表和手机端配置。">
+<meta name="keywords" content="CMW500">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CMW500 WIFI信令测试">
+<meta property="og:url" content="https://jacktaoz.github.io/2018/09/02/CMW500-WIFI信令测试/index.html">
+<meta property="og:site_name" content="Jacktao&#39;s Blog">
+<meta property="og:description" content="简介&amp;emsp;&amp;emsp; CMW500仿真WLAN AP（SSID:CMW-AP）功能，手机作为用户终端接入该 AP，由 CMW500 完成手机发射和接收性能的测试。这里以 802.11b/g 1/7/13 信道为例，讲解WLAN信令测试的仪表和手机端配置。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/157WLAN%20Signaling.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/157WLAN%20%E4%BF%A1%E4%BB%A4%E7%95%8C%E9%9D%A2.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/157%E9%85%8D%E7%BD%AEWLAN-AP%E4%BF%A1%E4%BB%A4%E5%8F%82%E6%95%B0.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/157Config1.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/157%E5%90%AF%E5%8A%A8WLAN%E4%BF%A1%E4%BB%A4.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/157WLAN%20AP%E8%BF%9E%E6%8E%A5.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/157Multi%20Evaluation%E5%92%8CPER%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/157config%E8%AE%BE%E7%BD%AE%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/157Multi%20Evaluation%E7%95%8C%E9%9D%A2.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/157Assign%20Views.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/157Trigger.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/157Input-Signal.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/157TASKS.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/157WLAN%20PER.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/157WLAN%20PER%E7%BB%93%E6%9E%9C.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/153Message%20Analyzer.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/%E5%88%86%E6%9E%90%E6%96%87%E4%BB%B6.png">
+<meta property="og:updated_time" content="2018-09-10T12:29:47.010Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CMW500 WIFI信令测试">
+<meta name="twitter:description" content="简介&amp;emsp;&amp;emsp; CMW500仿真WLAN AP（SSID:CMW-AP）功能，手机作为用户终端接入该 AP，由 CMW500 完成手机发射和接收性能的测试。这里以 802.11b/g 1/7/13 信道为例，讲解WLAN信令测试的仪表和手机端配置。">
+<meta name="twitter:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/157WLAN%20Signaling.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://jacktaoz.github.io/2018/09/02/CMW500-WIFI信令测试/"/>
+
+
+
+
+
+  <title>CMW500 WIFI信令测试 | Jacktao's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jacktao's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">出走半生，仍是少年</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jacktaoz.github.io/2018/09/02/CMW500-WIFI信令测试/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jacktao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jacktao's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">CMW500 WIFI信令测试</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-02T16:12:56+08:00">
+                2018-09-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CMW500/" itemprop="url" rel="index">
+                    <span itemprop="name">CMW500</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>&emsp;&emsp; CMW500仿真WLAN AP（SSID:CMW-AP）功能，手机作为用户终端接入该 AP，由 CMW500 完成手机发射和接收性能的测试。这里以 802.11b/g 1/7/13 信道为例，讲解WLAN信令测试的仪表和手机端配置。</p>
+<a id="more"></a>
+<h4 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h4><p>&emsp;&emsp;本节讲解CMW500手动测试WIFI Power/PER的操作过程，需要CMW500，射频线,屏蔽箱即可。CMW500相当于开启一个热点与手机进行连接，根据金机的天线方向性和OTA实际测试TRP/TIS值选择一个最佳位置，拦截不良坏机。</p>
+<h4 id="CMW500-设置-amp-测试"><a href="#CMW500-设置-amp-测试" class="headerlink" title="CMW500 设置&amp;测试"></a>CMW500 设置&amp;测试</h4><p>&emsp;&emsp;1、添加WLAN信令任务</p>
+<p>&emsp;&emsp;按SIGNAL GEN 按钮，进入 Generator/Signaling Controller 界面，选择 WLAN 功能中的Signaling选项，然后屏幕下方的任务栏菜单中会出现 WLAN Signaling功能菜单。该功能用于启动 WLAN AP 信令。如下图示：<br>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/157WLAN%20Signaling.png" alt="WLAN Signaling" title="WLAN Signaling "></p>
+<p>&emsp;&emsp;2、进入WLAN信令界面</p>
+<p>&emsp;&emsp;按任务栏菜单上的 WLAN Signaling 项，进入 WLAN 信令界面：<br>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/157WLAN%20%E4%BF%A1%E4%BB%A4%E7%95%8C%E9%9D%A2.png" alt="WLAN信令界面" title="WLAN 信令界面"></p>
+<p>&emsp;&emsp;3、配置 WLAN AP 信令参数</p>
+<p>&emsp;&emsp;以支持802.11b/g手机的测试为例，在信令界面更改如下图黄色圈中参数：</p>
+<p>&emsp;&emsp;在WLAN Signaling OFF状态下，配置如下参数：</p>
+<ul>
+<li>Frequency/Channel为相应的高中低（1/7/13）信道；</li>
+<li>Tx Burst Power 为仪表下行信号电平，设为－40.0dbm；</li>
+<li>Expected PEP 为设置仪表测量最大发射期望功率，设为 25dbm。该值应比手机实际发射功率RX Burst Power高10到15db，因手机接入时发射WLAN信号是以最大功率发射，如果该值设置小于手机实际信号，仪表无法正确测量手机功率，会导致手机接入失败；</li>
+<li>Standard 设置当前仪表和手机通信的标准，设为IEEE 802.11b/g； </li>
+<li>Payload Size 设置发送数据包的数据大小，一般设为 500/1000。<br>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/157%E9%85%8D%E7%BD%AEWLAN-AP%E4%BF%A1%E4%BB%A4%E5%8F%82%E6%95%B0.png" alt="配置WLAN-AP信令参数" title="配置WLAN-AP信令参数"></li>
+</ul>
+<p>&emsp;&emsp;点击信令界面右下角“Config”，在弹出的界面下配置如上图黄色圈中的RF端口设置及外部衰减补偿。在 Connection 项下，ISI filter有 ype1，Type2 两种，该参数用于改善不同WIFI芯片厂商在802.11b 模式下的接入兼容性。在 802.11b 接入时如果手机端获取 IP 异常，将 WLAN Signaling off,尝试改变该参数来重新做接入。<br>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/157Config1.png" alt="Config" title="Config"></p>
+<p>&emsp;&emsp;4、启动WLAN信令</p>
+<p>&emsp;&emsp;按ON/OFF按键，启动WLAN信令，WLAN信令启动完成后，界面如下图所示：<br>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/157%E5%90%AF%E5%8A%A8WLAN%E4%BF%A1%E4%BB%A4.png" alt="启动WLAN信令" title="启动WLAN信令"></p>
+<p>&emsp;&emsp;5、开启手机WLAN，与CMW500 建立连接</p>
+<p>&emsp;&emsp;将手机WIFI信号通过RF线或天线耦合与 CMW500 连接，启动手机WIFI，将手机放在耦合箱里面，搜索到CMW_AP 后进行连接，该连接没有密码设置，接入成功后仪表界面如下</p>
+<ul>
+<li>Connection Status 显示为 Associated；</li>
+<li>Mobile Capabilities 显示手机的信息：</li>
+<li>MAC 地址手机接入手机的 MAC 地址；</li>
+<li>RX Burst Power手机发射的接入功率。为了让手机能顺利接入仪表，Expected PEP 应比该功率大10到15db 比较好。<br>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/157WLAN%20AP%E8%BF%9E%E6%8E%A5.png" alt="WLAN AP连接" title="WLAN AP连接"></li>
+</ul>
+<p>&emsp;&emsp;6、配置WLAN信令测试Multi Evaluation和PER 快捷方式</p>
+<p>&emsp;&emsp;将Packet Generator Configuration State 设为ON，用于手机TX和RX的测试；将信令界面的右边栏两个 Go To…键分别配置为 WLAN Multi Evaluation 和 WLAN PER，便于发射和接收测试界面的切换，然后如下图：</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/157Multi%20Evaluation%E5%92%8CPER%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F.png" alt="Multi Evaluation和PER快捷方式" title="Multi Evaluation和PER快捷方式"></p>
+<p>&emsp;&emsp;通过config…按键可以设定或取消该快捷方式的设置，如下图所示：</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/157config%E8%AE%BE%E7%BD%AE%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F.png" alt="config设置快捷方式" title="config设置快捷方式"></p>
+<p>&emsp;&emsp;7、启动WLAN信令 TX测试Multi Evaluation</p>
+<p>&emsp;&emsp;在WLAN Signaling 界面按 WLAN Multi Eval.键，进入 WLAN Multi Evaluation 界面测试，按右上角 Multi Evaluation 键，然后按 ON/OFF 按键或 RESTART/STOP 按键，启动 WLAN 信令测试， Multi Evaluation 处于 RUN 状态，底色为黄色，接收手机发射的 WLAN 信号。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/157Multi%20Evaluation%E7%95%8C%E9%9D%A2.png" alt="Multi Evaluation" title="Multi Evaluation界面"></p>
+<p>&emsp;&emsp;在该界面下按“Assign Views”键可以设置测试项目的开关。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/157Assign%20Views.png" alt="Assign Views" title="Assign Views"></p>
+<p>&emsp;&emsp;在Trigger 选项中，设置测试信号的触发方式，实际测试时可以尝试使用 Free Run，IF Power 和 WLAN Sig1：RXFrameTrigger 三种方式中的某一种，便于测试到稳定的信号：</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/157Trigger.png" alt="Trigger" title="Trigger"></p>
+<p>&emsp;&emsp;在Input-Signal选项中，可以根据当前手机的工作模式来设置信号测试类型，便于仪表正确分析。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/157Input-Signal.png" alt="Input-Signal" title="Input-Signal"></p>
+<p>&emsp;&emsp;8、WLAN PER测试</p>
+<p>&emsp;&emsp;按TASKS键，显示出任务栏，如下图：</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/157TASKS.png" alt="TASKS" title="TASKS"></p>
+<p>&emsp;&emsp;通过任务栏的 WLAN Signaling 键返回到 WLAN Signaling 界面，通过前面设置的 WLAN PER 快捷键，进入到 PER 测试界面，如下图：</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/157WLAN%20PER.png" alt="WLAN PER " title="WLAN PER "></p>
+<p>&emsp;&emsp;设置 CMW500下行信号电平TX Burst Power，信号类型 Traffic Burst，统计数据量 Packets 等参数后，按ON/OFF按键或RESTART/STOP按键，完成 WLAN PER 测试。针对于WIFI一般误包率（PER）要求小于10%，通过不断设置TX Burst Power值以达到最大下限。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/157WLAN%20PER%E7%BB%93%E6%9E%9C.png" alt="WLAN PER结果" title="WLAN PER结果"></p>
+<h4 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h4><p>&emsp;&emsp;9、WLAN Message Analyzer</p>
+<p>&emsp;&emsp;WLAN Signaling 中集成了 Message Analyzer 工具，它可以抓取仪表和手机之间的信令交互信息，用于故障分析和定位。如果需要使用 Message Analyzer，在 WLAN Signaling OFF 状态下，通过 Config…配置 Message Analyzer 需要的信息项目，如下图：</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/153Message%20Analyzer.png" alt="Message Analyzer " title="Message Analyzer "></p>
+<p>&emsp;&emsp;在WLAN Signaling ON 状态下，通过 Message Analyzer 键打开 WLAN Analyzer 工具，开始监控手机和仪表间的信令信息，最后可以将该信息保存成文件供分析，如下图：</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/%E5%88%86%E6%9E%90%E6%96%87%E4%BB%B6.png" alt="分析文件 " title="分析文件"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CMW500/" rel="tag"># CMW500</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/02/CMW-RUN测试指导/" rel="next" title="CMW-RUN测试指导">
+                <i class="fa fa-chevron-left"></i> CMW-RUN测试指导
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/03/CMW-RUN安装搭建/" rel="prev" title="CMW-RUN安装搭建">
+                CMW-RUN安装搭建 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/logo.jpg"
+                alt="Jacktao" />
+            
+              <p class="site-author-name" itemprop="name">Jacktao</p>
+              <p class="site-description motion-element" itemprop="description">zhangt@dw.gdbbk.com</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#环境搭建"><span class="nav-number">2.</span> <span class="nav-text">环境搭建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CMW500-设置-amp-测试"><span class="nav-number">3.</span> <span class="nav-text">CMW500 设置&amp;测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据分析"><span class="nav-number">4.</span> <span class="nav-text">数据分析</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">true</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

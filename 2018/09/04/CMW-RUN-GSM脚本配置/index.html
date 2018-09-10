@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="Circuit Diagram," />
+  <meta name="keywords" content="RF Test Tool," />
 
 
 
@@ -83,35 +83,29 @@
 
 
 
-<meta name="description" content="简介&amp;emsp;&amp;emsp;介绍一款使用过的电路图设计软件Cadence。Cadence是一款专业的PCB设计和仿真软件，目前Cadence 16.6兼容Win8系统，特此讲解一下Cadence软件的安装使用。">
-<meta name="keywords" content="Circuit Diagram">
+<meta name="description" content="GSM脚本配置&amp;emsp;&amp;emsp;案例一：GSM_900_LOOP_VSCH_VSPCL脚本解读">
+<meta name="keywords" content="RF Test Tool">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Cadence安装教程">
-<meta property="og:url" content="https://jacktaoz.github.io/2018/08/26/Cadence安装教程/index.html">
+<meta property="og:title" content="CMW-RUN GSM脚本配置">
+<meta property="og:url" content="https://jacktaoz.github.io/2018/09/04/CMW-RUN-GSM脚本配置/index.html">
 <meta property="og:site_name" content="Jacktao&#39;s Blog">
-<meta property="og:description" content="简介&amp;emsp;&amp;emsp;介绍一款使用过的电路图设计软件Cadence。Cadence是一款专业的PCB设计和仿真软件，目前Cadence 16.6兼容Win8系统，特此讲解一下Cadence软件的安装使用。">
+<meta property="og:description" content="GSM脚本配置&amp;emsp;&amp;emsp;案例一：GSM_900_LOOP_VSCH_VSPCL脚本解读">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/131%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6.png">
-<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/132%E5%AE%89%E8%A3%85.jpeg">
-<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/133Licenemanner.png">
-<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/1301412320707_thumb.jpeg">
-<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/135product.png">
-<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/1361412320814_thumb.jpeg">
-<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/137src.lic.jpeg">
-<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/138%E5%AF%BC%E5%85%A5License.jpeg">
-<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/139cdslmd.jpeg">
-<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/140License%20Server%20Configuration%20Utility.jpeg">
-<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/1411412320922_thumb.jpeg">
-<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/1421412322451_thumb.jpeg">
-<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/143ConfigSerices.jpg">
-<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/144Start%20Service.jpg">
-<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/131%E8%BD%AF%E4%BB%B6%E7%95%8C%E9%9D%A2.jpeg">
-<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/131%E8%BD%AF%E4%BB%B6%E7%95%8C%E9%9D%A21.jpeg">
-<meta property="og:updated_time" content="2018-08-27T04:28:28.202Z">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/150GSM900.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/151%E8%84%9A%E6%9C%AC%E6%AD%A5%E9%AA%A4%E8%A7%A3%E8%AF%BB.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/151Edit.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/151%E5%91%BC%E5%8F%AB%E8%AE%BE%E7%BD%AE%E9%85%8D%E7%BD%AE.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/151%E6%9D%A1%E4%BB%B6%E8%AE%BE%E7%BD%AE.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/151%E4%BF%A1%E9%81%93%E5%BE%AA%E7%8E%AF.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/151%EF%BC%88GSM_GlobalParmeter.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/151Parameter.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/151GSM_Testset.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/151Limits.png">
+<meta property="og:updated_time" content="2018-09-10T12:34:26.223Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cadence安装教程">
-<meta name="twitter:description" content="简介&amp;emsp;&amp;emsp;介绍一款使用过的电路图设计软件Cadence。Cadence是一款专业的PCB设计和仿真软件，目前Cadence 16.6兼容Win8系统，特此讲解一下Cadence软件的安装使用。">
-<meta name="twitter:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/131%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6.png">
+<meta name="twitter:title" content="CMW-RUN GSM脚本配置">
+<meta name="twitter:description" content="GSM脚本配置&amp;emsp;&amp;emsp;案例一：GSM_900_LOOP_VSCH_VSPCL脚本解读">
+<meta name="twitter:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/150GSM900.png">
 
 
 
@@ -141,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="https://jacktaoz.github.io/2018/08/26/Cadence安装教程/"/>
+  <link rel="canonical" href="https://jacktaoz.github.io/2018/09/04/CMW-RUN-GSM脚本配置/"/>
 
 
 
 
 
-  <title>Cadence安装教程 | Jacktao's Blog</title>
+  <title>CMW-RUN GSM脚本配置 | Jacktao's Blog</title>
   
 
 
@@ -284,7 +278,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jacktaoz.github.io/2018/08/26/Cadence安装教程/">
+    <link itemprop="mainEntityOfPage" href="https://jacktaoz.github.io/2018/09/04/CMW-RUN-GSM脚本配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jacktao">
@@ -301,7 +295,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Cadence安装教程</h1>
+          <h1 class="post-title" itemprop="name headline">CMW-RUN GSM脚本配置</h1>
         
 
         <div class="post-meta">
@@ -313,8 +307,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-26T15:12:56+08:00">
-                2018-08-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-04T16:12:56+08:00">
+                2018-09-04
               </time>
             
 
@@ -336,8 +330,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Circuit-Diagram/" itemprop="url" rel="index">
-                    <span itemprop="name">Circuit Diagram</span>
+                  <a href="/categories/RF-Test-Tool/" itemprop="url" rel="index">
+                    <span itemprop="name">RF Test Tool</span>
                   </a>
                 </span>
 
@@ -378,37 +372,64 @@
       
 
       
-        <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>&emsp;&emsp;介绍一款使用过的电路图设计软件Cadence。Cadence是一款专业的PCB设计和仿真软件，目前Cadence 16.6兼容Win8系统，特此讲解一下Cadence软件的安装使用。</p>
-<a id="more"></a>
-<h4 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h4><p>&emsp;&emsp;1、安装包下载<a href="http://www.mr-wu.cn/cadence-orcad-allegro-resource-downloads/" target="_blank" rel="noopener">[Cadence]</a></p>
-<p>&emsp;&emsp;2、下载并解压文件，详细安装包文件内容如下<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/131%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6.png" alt="安装文件包" title="安装文件包 ">   </p>
-<p>&emsp;&emsp;3、双击Cadence-Allegro文件夹中的“setup.exe”开始正式的安装，先选择license manager进行安装。<br><img src="http://pdfyq8fr4.bkt.clouddn.com/201808/132%E5%AE%89%E8%A3%85.jpeg" alt="点击安装" title="点击安装 ">  </p>
-<p>&emsp;&emsp;4、以D:\Cadence为安装路径，首先在路径下面建立三个文件License Manager、SPB_16.6、SPB_data，安装的时候分别选择相应的路径。License Manager安装到对应路径下的D:\Cadence\LicenseManager，然后一路Next。安装的过程中会跳出license选择，点击“cancel”。</p>
-<p><img src="http://pdfyq8fr4.bkt.clouddn.com/201808/133Licenemanner.png" alt="License Manager安装" title="License Manager安装 ">  </p>
-<p>&emsp;&emsp;5、点击Product Installation安装对应的内容到<br>SPB_16.6/SPB_data路径下，然后一路Next，最后Finish，安装时间有点长，可以小憩一下。<br><img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/1301412320707_thumb.jpeg" alt="Product Installation" title="Product Installation "></p>
-<p><img src="http://pdfyq8fr4.bkt.clouddn.com/201808/135product.png" alt="Product Installation" title="Product Installation "></p>
-<h4 id="软件破解"><a href="#软件破解" class="headerlink" title="软件破解"></a>软件破解</h4><p>&emsp;&emsp;6、以上步骤是完成软件的安装了，接下来就开始破解软件。<br>先把D:\Cadence\SPB_16.6\tools\pspice文件中的orSimSetup.dll复制到电脑桌面上，以便于后续的破解操作。</p>
-<p>&emsp;&emsp;7、解压”Cadence_SPB16.60_Crack”,生成“aspirin”文件夹，里面有三个文件License Manager/LicGen/SPB_16.6都需要使用。将”aspirin\Cadence\License Manager”下所有的文件（pubkey、pubkey1.30.exe 和lLicenseManagerPubkey.bat）复制到刚安装的Cadence License Manager目录下。</p>
-<p>&emsp;&emsp;8、复制完毕后，在“D:\Cadence\LicenseManager”下鼠标双击“License Manager”脚本程序,出现一个控制台窗口一闪而过，LicenseManager破解完成。</p>
-<p>&emsp;&emsp;9、按照上面步骤，还需要复制对应的破解文件到对应的主体文件路径下，将“aspirin\Cadence\SPB_16.6\tools”下所有的文件复制到刚安装的路径中“D:\Cadence\SPB_16.6\tools”。<br><img src="http://pdfyq8fr4.bkt.clouddn.com/201808/1361412320814_thumb.jpeg" alt="破解文件" title="破解文件"></p>
-<p>&emsp;&emsp;10、复制完毕后，在“D:\Cadence\SPB_16.6\tools”下鼠标双击“Tools”脚本程序，出现一个控制台窗口，等待破解程序运行，至此主体程序破解完毕。</p>
-<p>&emsp;&emsp;11、接下来生成License文件，进入“aspirin\Cadence\LicGen”文件夹，打开License模板文件“src.lic”,保存对src.lic文件的修改，然后双击“LicGen”命令脚本，重新生成License文件，将新生成的“license.lic”文件复制到“D:\Cadence”路径下备用。</p>
-<p><img src="http://pdfyq8fr4.bkt.clouddn.com/201808/137src.lic.jpeg" alt="license文件" title="license文件"></p>
-<p>&emsp;&emsp;12、导入License文件，如果系统为64位的WIN7,需要先替换一个关键的文件，否则导入License文件会失败，解决的办法是将解压“cdslmd“文件得到”cdslmd.exe”复制到“D:\Cadence\LicenseManager“目录下，替换掉原有的文件。</p>
-<p><img src="http://pdfyq8fr4.bkt.clouddn.com/201808/138%E5%AF%BC%E5%85%A5License.jpeg" alt="导入license文件" title="导入license文件"></p>
-<p><img src="http://pdfyq8fr4.bkt.clouddn.com/201808/139cdslmd.jpeg" alt="导入license文件" title="导入license文件"></p>
-<p>&emsp;&emsp;13、开始添加License文件路径，在“开始”菜单中运行“License Server Configuration Utility”，然后一路Next，Finish。</p>
-<p><img src="http://pdfyq8fr4.bkt.clouddn.com/201808/140License%20Server%20Configuration%20Utility.jpeg" alt="Server Configuration Utilit" title="Server Configuration Utilit"><br><img src="http://pdfyq8fr4.bkt.clouddn.com/201808/1411412320922_thumb.jpeg" alt="添加license文件" title="添加license文件"><br><img src="http://pdfyq8fr4.bkt.clouddn.com/201808/1421412322451_thumb.jpeg" alt="主机名" title="主机名"></p>
-<p>&emsp;&emsp;14、运行License Clien Configurati on Utility，打开在空白处填上“5280@主机名”，点“next”，直至完成，5280是一个端口不能修改。</p>
-<h4 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h4><p>&emsp;&emsp;15、到这步Cadence Allegro 16.6破解基本上已经完成了，但还需要设置电脑环境变量，鼠标右键点击计算机，然后点击属性——&gt;高级系统设置——&gt;环境变量。先选择“新建”用户变量，新建如下变量：</p>
-<p>&emsp;&emsp;变量名：CDS_LIC_FILE</p>
-<p>&emsp;&emsp;变量值：5280@你的电脑名</p>
-<p>&emsp;&emsp;16、运行LMtools。选择ConfigSerices，第2个路径（path to license file）单击Browse添加证书，将License.bat换成我们生成的License.lic，然后点击save service。再点击start/stop/reread栏，先点Stop Server，在点击Start Server。</p>
-<p><img src="http://pdfyq8fr4.bkt.clouddn.com/201808/143ConfigSerices.jpg" alt="ConfigSerices" title="ConfigSerices"></p>
-<p><img src="http://pdfyq8fr4.bkt.clouddn.com/201808/144Start%20Service.jpg" alt="Service" title="Service"></p>
-<p>&emsp;&emsp;17、把安装目录下的 D:SPB_16.6/tools/pspice 目录下剪切出来的 orsimsetup.dll放回原路径,（如果不用仿真部分删掉也无所谓），至此软件破解完成，可以使用。</p>
-<p><img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/131%E8%BD%AF%E4%BB%B6%E7%95%8C%E9%9D%A2.jpeg" alt="软件界面" title="软件界面"></p>
-<p><img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/131%E8%BD%AF%E4%BB%B6%E7%95%8C%E9%9D%A21.jpeg" alt="软件界面" title="软件界面"></p>
+        <h4 id="GSM脚本配置"><a href="#GSM脚本配置" class="headerlink" title="GSM脚本配置"></a>GSM脚本配置</h4><p>&emsp;&emsp;<strong>案例一：GSM_900_LOOP_VSCH_VSPCL脚本解读</strong><br><a id="more"></a></p>
+<p>&emsp;&emsp;<strong>1、打开显示栏</strong></p>
+<p>&emsp;&emsp;打开GSM目录下的GSM_900_LOOP_VSCH_VSPCL，如下图，这是一个测试GSM900，以PCL vs CH 循环为主体架构的脚本。<br>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/150GSM900.png" alt="GSM900" title="GSM900"></p>
+<p>&emsp;&emsp;<strong>2、脚本解读</strong></p>
+<p>&emsp;&emsp;以GSM_900_LOOP_VSCH_VSPCL为模板，打开脚本配置文件，左边为脚本，右边为相应的步骤解读。<br>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/151%E8%84%9A%E6%9C%AC%E6%AD%A5%E9%AA%A4%E8%A7%A3%E8%AF%BB.png" alt="脚本解读" title="脚本解读"></p>
+<p>&emsp;&emsp;<strong>3、编辑脚本</strong></p>
+<p>&emsp;&emsp;点击Edit，编辑界面如下图，脚本由Installed栏（基础语句包）里面选择，然后进行参数设置。</p>
+<ul>
+<li>脚本操作选项中，从左往右功能分别是：语句名称，内容查看，参数配置，上移，下移，复制，粘贴，删除。</li>
+<li>点击脚本中某一步骤，在批注栏中输入需要的内容，即可在语句后面显示备注，如本图中的Chanel Loop 和PCL Loop。</li>
+<li>每一步骤前的+可读当前语句下的子内容。</li>
+<li>Conmands栏里面为命令语句包，如if，loop<br>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/151Edit.png" alt="Edit" title="Edit"></li>
+</ul>
+<p>&emsp;&emsp;<strong>3.1、呼叫设置配置</strong></p>
+<p>&emsp;&emsp;双击步骤2（GSM_CallSetup），可对呼叫设置进行配置，如下图：</p>
+<ul>
+<li>确定测试的是语音业务还是数据业务。如果数据业务，请选择相应时隙配比和对应的测试模式(Test Mode B or BELR)</li>
+<li>选择测试的频段和输入电平。</li>
+<li>其他设置通常情况下可保持默认。如有其他需求可自行更改。<br>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/151%E5%91%BC%E5%8F%AB%E8%AE%BE%E7%BD%AE%E9%85%8D%E7%BD%AE.png" alt="呼叫设置配置" title="呼叫设置配置"></li>
+</ul>
+<p>&emsp;&emsp;<strong>3.2、条件设置</strong></p>
+<p>&emsp;&emsp;脚本在编辑状态下，双击步骤3下拉选择IF的执行条件。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/151%E6%9D%A1%E4%BB%B6%E8%AE%BE%E7%BD%AE.png" alt="条件设置" title="条件设置"></p>
+<p>&emsp;&emsp;<strong>3.3、外循环：信道循环</strong></p>
+<p>&emsp;&emsp;双击打开步骤4（loop），可看到Loop配置，其中包含三个参数，分别是开始值（Start value)，结束值(Stop value)，步长(step)。</p>
+<ul>
+<li>若选择Global （Expose to Test  Plan),即可活动参数键入，那么这几个参数将在脚本主界面以参数配置栏体现，如主界面显示栏可直接输入测试参数，请注意所对应的步骤数。如上述脚本中的步骤4，我们知道它是信道循环，那么在参数配置栏输入信道号，同理步骤7输入功率等级。    </li>
+<li>选择Constant即为定值，那么右边的方框将被激活，可在方框内输入参数，主界面显示栏将没有参数配置栏。</li>
+</ul>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/151%E4%BF%A1%E9%81%93%E5%BE%AA%E7%8E%AF.png" alt="信道循环" title="信道循环"></p>
+<p>&emsp;&emsp;<strong>3.4、循环因子设置</strong></p>
+<p>&emsp;&emsp;在编辑界面，双击步骤5（GSM_GlobalParmeter），如下图，其功能是告诉脚本所需要循环的参数类别，以及参数数值的来源。</p>
+<ul>
+<li>在Band 中，选择对应的频段。</li>
+<li>在Loop Parameter中，下拉选择循环参数的类别。注意，此语句的位置不同，所选择的参数类别也有所不同。如步骤5，它是步骤4Loop的载体。那么请选择Channel，同理步骤8此处应选择PCL。</li>
+</ul>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/151%EF%BC%88GSM_GlobalParmeter.png" alt="（GSM_GlobalParmeter" title="（GSM_GlobalParmeter"></p>
+<ul>
+<li>步骤5右键选择Parameter，可得下图。点击红框处，可见弹框，下拉Reference，选择数值来源的步骤数。如选择Constant,可输入自定义值。<br>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/151Parameter.png" alt="（Parameter" title="（Parameter"></li>
+</ul>
+<p>&emsp;&emsp;而步骤6，7，8 ,9同理于步骤3，4，5。</p>
+<p>&emsp;&emsp;<strong>3.10、测试项目语句</strong></p>
+<p>&emsp;&emsp;双击步骤10（GSM_Testset），如下图</p>
+<ul>
+<li>选择Test Mode , Loop Test or Single Test，此脚本应选Loop Test，因为是以Loop为主架构的测试。而Single Test则不进行循环。</li>
+<li>选择Report Layout vs：若选择PCL，那么测试报告将以同一信道下，不同功率等级的测试指标的方式呈现出来，若选择RF Channel则刚好相反。为方便查看报告，建议选择后者。</li>
+<li>若Test Mode选择的是Single Test，那么请选择下图红框中的各项配置。注意，在Loop Test模式下，红框中的内容无法更改。因为PCL及CH等是由步骤4，7中Loop所决定的，而Single Test的PCL和CH等则是手动输入的。如果测试内容与红框中的默认值不相符，如频段，电平 等。请下拉选择Single Test，更改为所需频段以及电平，再重新选回Loop Test。</li>
+<li>选择测试项目。上图中蓝色方框为各测试项目的类别。下方勾选具体项目。请根据测试报表选择对应的项目。注意：在Loop Test模式下模板类的项目无法勾选，如PVT，调制频谱，开关频谱等。</li>
+</ul>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/151GSM_Testset.png" alt="（GSM_Testset" title="（GSM_Testset"></p>
+<p>&emsp;&emsp;点击步骤10中的Limits，如上图。</p>
+<ul>
+<li>此图的功能的设置指标的限值，一旦超出此限值，则报告中将会标红，并显示Failed。</li>
+<li>下图中的红框是参数类别，下方可选择具体参数的限值。</li>
+<li>红框上方选择限值适用的频段（Limits for Band)。</li>
+</ul>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/151Limits.png" alt="（Limits" title="（Limits"></p>
+<p>&emsp;&emsp;通过对整个脚本简单解析，可以大致了解其测试构架的组成：以CH为外循环，PCL为内循环,利用Loop决定循环的数值，通过GSM_GlobalParameter进行导入，配置完PCL和CH，GSM_Testset就开始按照配置进行测试了。</p>
 
       
     </div>
@@ -426,7 +447,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Circuit-Diagram/" rel="tag"># Circuit Diagram</a>
+            <a href="/tags/RF-Test-Tool/" rel="tag"># RF Test Tool</a>
           
         </div>
       
@@ -439,8 +460,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/25/手机射频电路原理/" rel="next" title="手机射频电路原理">
-                <i class="fa fa-chevron-left"></i> 手机射频电路原理
+              <a href="/2018/09/03/CMW-RUN安装搭建/" rel="next" title="CMW-RUN安装搭建">
+                <i class="fa fa-chevron-left"></i> CMW-RUN安装搭建
               </a>
             
           </div>
@@ -448,10 +469,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/26/PADS-VX安装教程/" rel="prev" title="PADS-VX安装教程">
-                PADS-VX安装教程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -587,7 +604,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#软件安装"><span class="nav-number">2.</span> <span class="nav-text">软件安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#软件破解"><span class="nav-number">3.</span> <span class="nav-text">软件破解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#环境配置"><span class="nav-number">4.</span> <span class="nav-text">环境配置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#GSM脚本配置"><span class="nav-number">1.</span> <span class="nav-text">GSM脚本配置</span></a></li></ol></div>
             
 
           </div>
