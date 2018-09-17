@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[CMW RUN LTE脚本配置]]></title>
+    <url>%2F2018%2F09%2F15%2FCMW-RUN-LTE%E8%84%9A%E6%9C%AC%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[LTE脚本解读 步骤2进行呼叫设置。 因为模板类的测试无法统一测试，所以，将这4项单独分出来进行测试。 图中2处选择TDD或FDD；4处勾选上。 选择测试的BW，Band，和CH，以及测试的项目，双击1处可对测试信道进行配置。若选择Clear Channel 则不进行此带宽的测试，若选择Use Default则是默认信道。 图中3设置电源的类型 在LTE的测试过程中，程序会经常弹出对话框，提示对终端进行开关机。若终端没有重启或者开关飞行模式，程序会对端口通断一次，使终端重新注册，但这种被动的方法成功率不高。所以必需寻找可控的方案解放人手，提高效率。 &emsp;&emsp; 电源控制&emsp;&emsp;可以通过对外部电源控制实现重启，点击电源类型设置后，如下图。 图中1选择外部电源 图中2选择相应的程控电源 图中3选择通断的间隔 部分终端在掉电，又瞬间上电后会重启。利用这个特性，当终端需要开关机时，程序会控制电源通断一次，这时终端便会重启并注册。 图中1可选择AT Modem ….，前提是终端和PC有相关的环境。 图中1也选择Customized Test Plan.意思是用户自定义的方案。 &emsp;&emsp; &emsp;&emsp;终端还可以通过ADB命令的办法进行重启。当然，需要PC有ADB的环境，以及终端打开USB调试。 在上图1处选择Customized Test Plan后，如下图，在红框处加载ADB命令的脚本 ADB命令的语句可单独保存为脚本，如下图，双击打开，输入重启的命令。 外部电源控制的方法适用于：终端掉电，瞬间加电后可以重启，并且通过假电池外部供电的传导测试。 若终端无法通断电重启，且需要整机测试，那么可采用ADB命令的方法。 ADB命令的方法稳定性不如外部电源，因为测试过程中终端有可能断开ADB链接。而外部电源则是强制性的。 &emsp;&emsp; BLER脚本设置 不同的Band可通过硬切换的办法，即断开链接后，重新呼叫。 步骤5处设置测试的Band,以及将CH的值进行导入。 不同的BW间可通过步骤9的语句,进行软切换，即不需要断开链接。但需要配置目标BW以及RB数量和位置。 双击步骤7，可见配置界面，配置初始电平及通过率限值。 红框中的值并不是其灵敏度，只是其RS EPRE值，可通过公式进行转换：Full Cell BW Pow=RS EPRE + 10 lg(BW）125) 此脚本无参考原始脚本，自行编写。 &emsp;&emsp; 同项目/频段 多脚本测试衔接 可以通过TestPlan_Start语句进行衔接。 图中红框处选择下一个脚本的路径。在完成当前脚本后，将会打开并且直接开始测试下一个脚本，图中1选择是否要混合测试报告。 &emsp;&emsp; 不同项目/不同频段 多脚本测试衔接&emsp;&emsp;不同频段，不同项目测试衔接完成后，需要飞行下或重启才能重新注册到新的网络。 可以把ADB命令放在每个脚本的前面，重启完成后再进行呼叫。 控制外部电源的通断进行重启。由于程控电源是一个SCPI 的设备，所以可以利用SCPICommandList这个语句对其控制，红框处选择电源的地址，在输入框中输入通断的SCPI命令。 &emsp;&emsp; &emsp;&emsp;ADB 命令语句，脚本衔接语句，SCPI控制语句，路径如下图&emsp;&emsp; 注意事项 在工程模式中将应答方式设置为自动接听。 板级测试的话，设置好程控电源。 整机测试设置好ADB环境。 world mode 设置为对应的制式。]]></content>
+      <categories>
+        <category>RF Test Tool</category>
+      </categories>
+      <tags>
+        <tag>CMW RUN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CMW RUN GPRS/3G脚本设置]]></title>
+    <url>%2F2018%2F09%2F14%2FCMW-RUN-GPRS-3G%E8%84%9A%E6%9C%AC%E8%AE%BE%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[GPRS脚本解读 步骤1-7与GSM相似 步骤8处，是配置GPRS功率等级。我们知道GPRS的功率参数是Gamma值，设置此语句，可更改其功率配比。 因为GSM_GlobalParameter不能设置为循环Gamma值，所以此脚本没有像GSM 那样有内外双循环的架构，各PCL是独立分开的。脚本中Loop只是循环了CH。 从结构上可以看出PCL5，7，12的语句是对称的，PCL5之所以没有GSM_PacketConfiguration这个语句，是因为步骤2中已经设置其Gamma值了。 步骤18-29都是模板类测试。同样的步骤18，22，26都是设置不同的功率配比。 此脚本无参考原始脚本，自行编写。 &emsp;&emsp; 步骤2 GSM_CallSetup设置&emsp;&emsp;步骤2/8设置 选择数据业务 service：Packet Data 测试模式选择 Testmode： B 时隙配置 Packet Configuration点击时隙配置进入可见下图，1处设置网络类型，EDGE的话可在此处选择；2处选择主时隙。 红框中设置上行配比：4上1下，PCL5等价于Gamma值3 ，编码方式CS-4 步骤8 GSM_GlobalParameter 中设置的方法同右图。 &emsp;&emsp; &emsp;&emsp;设置BER 步骤31是更改TestMode，之前TX部分是 TestMode B ，而RX部分则是TestMode BLER 步骤33是配置接收的时隙配比 步骤35是循环电平，如下图，是从标准的-104到-111，步长为1dB。由于此语句不像GSM的BER语句能够 自行搜寻最小电平，所以只能人为设置其循环的电平，我们从其BELR是否大于10%判定最小电平。 循环下限电平不宜设置过低，否则终端会掉线，建议根据经验和环境进行设定。 双击可得下图，根据接收的4下1上，主时隙4的配比进行设置。 此脚本无参考原始脚本，自行编写。 对于GPRS的其他频段设置方法相同。至于EDGE，只需更改其网络类型和编码方式即可，其他设置与GPRS相同。 &emsp;&emsp; 3G脚本 3G的脚本相对于2G精简了不少，所有测试项目和语句全都封装为3GPP 的一个语句。 步骤2处只需设置一个呼叫Band的即可，其他通常情况下可保持默认 双击步骤4可见下图，红框处选择User….即用户自定义，此时下方的Band 和CH 可自行选择。若选择3GPP Standard，那么下方的内容为灰色，不可更改， Band 和CH 均按3GPP协议执行。 依据终端硬件配置选择相应的版本号。此处测试的项目为WCDMA，所以选择R99 。根据测试任务选择测试项目，TX部分囊括了所有项目，RX部分 则需要另外的脚本。 同样的，TD-SCDMA脚本与WCDMA相类似，此处不进行展开讲解。 &emsp;&emsp; WCDMA灵敏度设置 步骤2处设置测试的Band，步骤4处设置其下的CH 双击步骤5选择对应的频段，并且将Loop的值导入到步骤5中，配置方法参照GSM设置 步骤7处可加入一定的延迟。步骤8处设定起始电平和限值。 参考原始脚本路径为：WCDMA_Band1_BERSarch.rstp &emsp;&emsp;]]></content>
+      <categories>
+        <category>RF Test Tool</category>
+      </categories>
+      <tags>
+        <tag>CMW RUN</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[CMW500 WIFI信令测试]]></title>
     <url>%2F2018%2F09%2F06%2FCMW500-WIFI%E4%BF%A1%E4%BB%A4%E6%B5%8B%E8%AF%95%2F</url>
     <content type="text"><![CDATA[简介&emsp;&emsp; CMW500仿真WLAN AP（SSID:CMW-AP）功能，手机作为用户终端接入该 AP，由 CMW500 完成手机发射和接收性能的测试。这里以 802.11b/g 1/7/13 信道为例，讲解WLAN信令测试的仪表和手机端配置。 环境搭建&emsp;&emsp;本节讲解CMW500手动测试WIFI Power/PER的操作过程，需要CMW500，射频线,屏蔽箱即可。CMW500相当于开启一个热点与手机进行连接，根据金机的天线方向性和OTA实际测试TRP/TIS值选择一个最佳位置，拦截不良坏机。 CMW500 设置&amp;测试&emsp;&emsp;1、添加WLAN信令任务 &emsp;&emsp;按SIGNAL GEN 按钮，进入 Generator/Signaling Controller 界面，选择 WLAN 功能中的Signaling选项，然后屏幕下方的任务栏菜单中会出现 WLAN Signaling功能菜单。该功能用于启动 WLAN AP 信令。如下图示：&emsp;&emsp; &emsp;&emsp;2、进入WLAN信令界面 &emsp;&emsp;按任务栏菜单上的 WLAN Signaling 项，进入 WLAN 信令界面：&emsp;&emsp; &emsp;&emsp;3、配置 WLAN AP 信令参数 &emsp;&emsp;以支持802.11b/g手机的测试为例，在信令界面更改如下图黄色圈中参数： &emsp;&emsp;在WLAN Signaling OFF状态下，配置如下参数： Frequency/Channel为相应的高中低（1/7/13）信道； Tx Burst Power 为仪表下行信号电平，设为－40.0dbm； Expected PEP 为设置仪表测量最大发射期望功率，设为 25dbm。该值应比手机实际发射功率RX Burst Power高10到15db，因手机接入时发射WLAN信号是以最大功率发射，如果该值设置小于手机实际信号，仪表无法正确测量手机功率，会导致手机接入失败； Standard 设置当前仪表和手机通信的标准，设为IEEE 802.11b/g； Payload Size 设置发送数据包的数据大小，一般设为 500/1000。&emsp;&emsp; &emsp;&emsp;点击信令界面右下角“Config”，在弹出的界面下配置如上图黄色圈中的RF端口设置及外部衰减补偿。在 Connection 项下，ISI filter有 ype1，Type2 两种，该参数用于改善不同WIFI芯片厂商在802.11b 模式下的接入兼容性。在 802.11b 接入时如果手机端获取 IP 异常，将 WLAN Signaling off,尝试改变该参数来重新做接入。&emsp;&emsp; &emsp;&emsp;4、启动WLAN信令 &emsp;&emsp;按ON/OFF按键，启动WLAN信令，WLAN信令启动完成后，界面如下图所示：&emsp;&emsp; &emsp;&emsp;5、开启手机WLAN，与CMW500 建立连接 &emsp;&emsp;将手机WIFI信号通过RF线或天线耦合与 CMW500 连接，启动手机WIFI，将手机放在耦合箱里面，搜索到CMW_AP 后进行连接，该连接没有密码设置，接入成功后仪表界面如下 Connection Status 显示为 Associated； Mobile Capabilities 显示手机的信息： MAC 地址手机接入手机的 MAC 地址； RX Burst Power手机发射的接入功率。为了让手机能顺利接入仪表，Expected PEP 应比该功率大10到15db 比较好。&emsp;&emsp; &emsp;&emsp;6、配置WLAN信令测试Multi Evaluation和PER 快捷方式 &emsp;&emsp;将Packet Generator Configuration State 设为ON，用于手机TX和RX的测试；将信令界面的右边栏两个 Go To…键分别配置为 WLAN Multi Evaluation 和 WLAN PER，便于发射和接收测试界面的切换，然后如下图： &emsp;&emsp; &emsp;&emsp;通过config…按键可以设定或取消该快捷方式的设置，如下图所示： &emsp;&emsp; &emsp;&emsp;7、启动WLAN信令 TX测试Multi Evaluation &emsp;&emsp;在WLAN Signaling 界面按 WLAN Multi Eval.键，进入 WLAN Multi Evaluation 界面测试，按右上角 Multi Evaluation 键，然后按 ON/OFF 按键或 RESTART/STOP 按键，启动 WLAN 信令测试， Multi Evaluation 处于 RUN 状态，底色为黄色，接收手机发射的 WLAN 信号。 &emsp;&emsp; &emsp;&emsp;在该界面下按“Assign Views”键可以设置测试项目的开关。 &emsp;&emsp; &emsp;&emsp;在Trigger 选项中，设置测试信号的触发方式，实际测试时可以尝试使用 Free Run，IF Power 和 WLAN Sig1：RXFrameTrigger 三种方式中的某一种，便于测试到稳定的信号： &emsp;&emsp; &emsp;&emsp;在Input-Signal选项中，可以根据当前手机的工作模式来设置信号测试类型，便于仪表正确分析。 &emsp;&emsp; &emsp;&emsp;8、WLAN PER测试 &emsp;&emsp;按TASKS键，显示出任务栏，如下图： &emsp;&emsp; &emsp;&emsp;通过任务栏的 WLAN Signaling 键返回到 WLAN Signaling 界面，通过前面设置的 WLAN PER 快捷键，进入到 PER 测试界面，如下图： &emsp;&emsp; &emsp;&emsp;设置 CMW500下行信号电平TX Burst Power，信号类型 Traffic Burst，统计数据量 Packets 等参数后，按ON/OFF按键或RESTART/STOP按键，完成 WLAN PER 测试。针对于WIFI一般误包率（PER）要求小于10%，通过不断设置TX Burst Power值以达到最大下限。 &emsp;&emsp; 数据分析&emsp;&emsp;9、WLAN Message Analyzer &emsp;&emsp;WLAN Signaling 中集成了 Message Analyzer 工具，它可以抓取仪表和手机之间的信令交互信息，用于故障分析和定位。如果需要使用 Message Analyzer，在 WLAN Signaling OFF 状态下，通过 Config…配置 Message Analyzer 需要的信息项目，如下图： &emsp;&emsp; &emsp;&emsp;在WLAN Signaling ON 状态下，通过 Message Analyzer 键打开 WLAN Analyzer 工具，开始监控手机和仪表间的信令信息，最后可以将该信息保存成文件供分析，如下图： &emsp;&emsp;]]></content>
@@ -19,7 +41,7 @@
         <category>RF Test Tool</category>
       </categories>
       <tags>
-        <tag>RF Test Tool</tag>
+        <tag>CMW RUN</tag>
       </tags>
   </entry>
   <entry>
@@ -34,14 +56,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[CMW-RUN安装搭建]]></title>
+    <title><![CDATA[CMW RUN安装搭建]]></title>
     <url>%2F2018%2F09%2F03%2FCMW-RUN%E5%AE%89%E8%A3%85%E6%90%AD%E5%BB%BA%2F</url>
     <content type="text"><![CDATA[简介&emsp;&emsp; CMWRUN是一款配套CMW500使用的软件，通过这软件可实现射频的自动化测试，即使对手动操作不涉了解，只要对射频的测试项目有一定的认识，也能够较快的完成射频的相关测试。虽然厂家提供的原始脚本可以减轻我们的测试压力，但是却不能够满足我们更进一步的要求，比如说2G的脚本较为零乱，3G，4G没有RX的测试，部分项目不能统一测试等，所以需要对其进行优化以满足对自动化的要求。 软件安装&emsp;&emsp;1、安装Microsoft.NET和RSCMWrunSetup-1.8.5两个软件安装包（先安装Microsoft.NET再安装RSCMWrunSetup-1.8.5）。安装包下载[Microsoft.NET] [RSCMWrunSetup]&emsp;&emsp; 设备搭建&emsp;&emsp;2、配套设备：CMW500，屏蔽箱(带耦合板)或三角锥，射频连接线，电脑(安装CMWRUN)，网线等。&emsp;&emsp; &emsp;&emsp;3、建立CMWRUN与CMW500的连接 &emsp;&emsp;3.1、电脑与CMW500用网线连接后。按setup键查看CMW500的IP地址，然后将电脑的IP地址修改成与CMW500-IP地址同一个网段但不能相同。例如CMW500-IP地址为172.22.1.5，可将电脑修改成172.22.1.6。&emsp;&emsp; &emsp;&emsp;3.2、CMW500 IP查看如下 &emsp;&emsp;按“SETUP”按键，选择”System”栏目，在对应的Lan Services中： Lan Remote: 对应于仪表后面板的网口，网口写有Lan Remote； Lan Front: 对应于仪表前面板的网口； 注：这两个网口可以用于控制仪表，其他网口的地址请勿更改。 &emsp;&emsp; &emsp;&emsp;3.3、打开CMWRUN软件，设置其与仪表的连接 &emsp;&emsp;点击菜单: “Resources-&gt;SCPI Connections…”，如下图 &emsp;&emsp; &emsp;&emsp;4、添加设备 &emsp;&emsp;第一次连接仪器时需添加新的设备，点击ADD如图：Alias部分输入CMW的别名，Resource Name部分输入CMW500的地址(格式必须为TCPIP0::172.22.1.4::INSTR，IP地址为CWM500的IP，如图所示)。 &emsp;&emsp; &emsp;&emsp;点OK添加完毕后点击Test-Connection测试是否能够和CMW500连接上，下图为连接成功对话框。 &emsp;&emsp; &emsp;&emsp;5、选择License Keys &emsp;&emsp;连接成功之后选择CMWRUN使用时需要的License Keys来源，点击菜单“Options-&gt;License Keys-&gt;Remote Device…”，如下图所示: &emsp;&emsp; &emsp;&emsp;弹出“Remote License Server”界面，在编辑框中填入CMW的“Resource Name”（和上一步的Resource Name一致），然后点击“Access!”查询CMW中支持License的信息，如下图所示: 添加后点OK。 &emsp;&emsp; &emsp;&emsp;成功添加License Keys后，软件会提示重启CMWRUN软件。关闭CMWRUN软件，重新打开软件后会自动控制CMW500，这样就可以进行自动化测试。]]></content>
       <categories>
         <category>RF Test Tool</category>
       </categories>
       <tags>
-        <tag>RF Test Tool</tag>
+        <tag>CMW RUN</tag>
       </tags>
   </entry>
   <entry>
@@ -52,7 +74,7 @@
         <category>RF Test Tool</category>
       </categories>
       <tags>
-        <tag>RF Test Tool</tag>
+        <tag>CMU GO</tag>
       </tags>
   </entry>
   <entry>
