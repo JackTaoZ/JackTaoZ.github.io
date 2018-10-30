@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml" />
+
+
+
+  <meta name="keywords" content="Capacitance," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="基本概念&amp;emsp;&amp;emsp;电容（Capacitance）亦称作“电容量”，是指在给定电位差下的电荷储藏量，记为C，国际单位是法拉（F）。一般来说，电荷在电场中会受力而移动，当导体之间有了介质，则阻碍了电荷移动而使得电荷累积在导体上，造成电荷的累积储存，储存的电荷量则称为电容。">
+<meta name="keywords" content="Capacitance">
+<meta property="og:type" content="article">
+<meta property="og:title" content="电容基础知识">
+<meta property="og:url" content="https://jacktaoz.github.io/2018/10/07/电容基础知识/index.html">
+<meta property="og:site_name" content="Jacktao&#39;s Blog">
+<meta property="og:description" content="基本概念&amp;emsp;&amp;emsp;电容（Capacitance）亦称作“电容量”，是指在给定电位差下的电荷储藏量，记为C，国际单位是法拉（F）。一般来说，电荷在电场中会受力而移动，当导体之间有了介质，则阻碍了电荷移动而使得电荷累积在导体上，造成电荷的累积储存，储存的电荷量则称为电容。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E7%94%B5%E5%AE%B9.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E9%9A%94%E7%9B%B4%E6%B5%81%E7%94%B5%E5%AE%B9.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/152%E9%80%9A%E4%BA%A4%E9%98%BB%E7%9B%B4.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E6%97%81%E8%B7%AF%EF%BC%88%E5%8E%BB%E8%80%A6%EF%BC%89.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E6%97%81%E8%B7%AF.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E8%80%A6%E5%90%881.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E8%80%A6%E5%90%882.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E6%BB%A4%E6%B3%A2.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E6%B8%A9%E5%BA%A6%E8%A1%A5%E5%81%BF.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E8%AE%A1%E6%97%B6.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E8%B0%83%E8%B0%90.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E6%95%B4%E6%B5%811.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E6%95%B4%E6%B5%812.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E5%82%A8%E8%83%BD.png">
+<meta property="og:updated_time" content="2018-10-30T07:01:58.482Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="电容基础知识">
+<meta name="twitter:description" content="基本概念&amp;emsp;&amp;emsp;电容（Capacitance）亦称作“电容量”，是指在给定电位差下的电荷储藏量，记为C，国际单位是法拉（F）。一般来说，电荷在电场中会受力而移动，当导体之间有了介质，则阻碍了电荷移动而使得电荷累积在导体上，造成电荷的累积储存，储存的电荷量则称为电容。">
+<meta name="twitter:image" content="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E7%94%B5%E5%AE%B9.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://jacktaoz.github.io/2018/10/07/电容基础知识/"/>
+
+
+
+
+
+  <title>电容基础知识 | Jacktao's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jacktao's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">出走半生，仍是少年</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jacktaoz.github.io/2018/10/07/电容基础知识/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jacktao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jacktao's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">电容基础知识</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-07T16:12:56+08:00">
+                2018-10-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Electronic-Components/" itemprop="url" rel="index">
+                    <span itemprop="name">Electronic Components</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><p>&emsp;&emsp;电容（Capacitance）亦称作“电容量”，是指在给定电位差下的电荷储藏量，记为C，国际单位是法拉（F）。一般来说，电荷在电场中会受力而移动，当导体之间有了介质，则阻碍了电荷移动而使得电荷累积在导体上，造成电荷的累积储存，储存的电荷量则称为电容。</p>
+<a id="more"></a>
+<p>&emsp;&emsp;电容是指容纳电场的能力。任何静电场都是由许多个电容组成，有静电场就有电容，电容是用静电场描述的。一般认为：孤立导体与无穷远处构成电容，导体接地等效于接到无穷远处，并与大地连接成整体。</p>
+<p>&emsp;&emsp;电容（或称电容量）是表现电容器容纳电荷本领的物理量。电容从物理学上讲，它是一种静态电荷存储介质，可能电荷会永久存在，这是它的特征，它的用途较广，它是电子、电力领域中不可缺少的电子元件。主要用于电源滤波、信号滤波、信号耦合、谐振、滤波、补偿、充放电、储能、隔直流等电路中。</p>
+<h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>&emsp;&emsp;电容器所带电量Q与电容器两极间的电压U的比值，叫电容器的电容。在电路学里，给定电势差，电容器储存电荷的能力，称为电容（capacitance），标记为C。采用国际单位制，电容的单位是法拉（farad），标记为F。C=εS/d=εS/4πkd（真空）=Q/U</p>
+<h4 id="单位及转换"><a href="#单位及转换" class="headerlink" title="单位及转换"></a>单位及转换</h4><p>&emsp;&emsp;在国际单位制里，电容的单位是法拉，简称法，符号是F，由于法拉这个单位太大，所以常用的电容单位有毫法（mF）、微法（μF）、纳法（nF）和皮法（pF）等。1F=10^(3)mF =10^(6)uF =10^(9)nF= 10^(12)pF，电容与电池容量的关系：1伏安时=1瓦时=3600焦耳，W= CU^2/2=QU/2。</p>
+<h4 id="计算公式"><a href="#计算公式" class="headerlink" title="计算公式"></a>计算公式</h4><p>&emsp;&emsp;一个电容器，如果带1库的电量时两级间的电势差是1伏，这个电容器的电容就是1法拉，即：C=Q/U 。但电容的大小不是由Q（带电量）或U（电压）决定的，即电容的决定式为：C=εS/4πkd 。其中，ε是一个常数，S为电容极板的正对面积，d为电容极板的距离，k则是静电力常量。常见的平行板电容器，电容为C=εS/d（ε为极板间介质的介电常数，S为极板面积，d为极板间的距离）。</p>
+<ul>
+<li>电容器的电势能计算公式：E=CU^2 /2=QU/2=Q^2/2C</li>
+<li>多电容器并联计算公式：C=C1+C2+C3+…+Cn</li>
+<li>多电容器串联计算公式：1/C=1/C1+1/C2+…+1/Cn</li>
+<li>三电容器串联：C=（C1<em> C2</em> C3）/（C1<em> C2+C2</em> C3+C1*C3）</li>
+</ul>
+<h4 id="电容的工作原理"><a href="#电容的工作原理" class="headerlink" title="电容的工作原理"></a>电容的工作原理</h4><p>&emsp;&emsp;电路能导电是因为导体中的电子在电源的作用下定向移动，形成电流而“导电”。电源相当于一个“抽水机”，将正极附近的电子抽到负极。正极的电子少了，离正极更远处的电子就流过来，负极多了，就流向离负极更远的地方。这样一直循环，电子就相当于从负极出发，绕电路一圈，回到正极，经过电源，再从负极出发，形成了定向移动，也就形成了持续电流。若断路了，这个电流就不能持续下去了，也就是我们通常所说的没有电流。</p>
+<p>&emsp;&emsp;看电容充电的电路，电源还是像抽水机一样在工作，电子就从负极一直跑，跑到电容器下面那个极板，断了没路了，就聚集在那里。这多电子那里来？从正极。正极的呢？从正极附近。附近的呢？从更远处……最远就是电容器的上面的极板。电子跑了，只剩带正电的粒子，那上级板就带正电，下级板有太多电子了，就带负电。</p>
+<p>&emsp;&emsp;由于电容的两个极板带有同量的异种电荷所以会产生同电源相反的电压，不断的抵消电源送来的电压。直到电容的电压等于电源的电压，则充电停止，电路相当于断开。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E7%94%B5%E5%AE%B9.png" alt="电容充电" title="电容充电"></p>
+<h4 id="电容的作用"><a href="#电容的作用" class="headerlink" title="电容的作用"></a>电容的作用</h4><p>&emsp;&emsp;<strong>1.通交隔直</strong>：作用是阻止直流通过而让交流通过。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E9%9A%94%E7%9B%B4%E6%B5%81%E7%94%B5%E5%AE%B9.png" alt="隔直流电容" title="隔直流电容"></p>
+<p>&emsp;&emsp;所谓隔直电路的本质是截止频率比较低的高通滤波器，最简单的RC高通滤波器也是一个电容串联一个电阻。某些隔直电路看起来只有一个电容，那是因为电容后面的负载本身有一定的输入等效电阻。如果后面是运放的高阻输入端，仅仅用一个电容就是错误的设计了。这种电路，不仅无法隔直，而且运放的输入偏置电流在电容上逐渐积分，最终会导致电容两端积累过高的电压致使运放输入电压超出正常的共模输入范围。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/152%E9%80%9A%E4%BA%A4%E9%98%BB%E7%9B%B4.png" alt="通交隔直" title="通交隔直"></p>
+<p>&emsp;&emsp;<strong>2.旁路（去耦）</strong>：为交流电路中某些并联的元件提供低阻抗通路。在电子电路中，去耦电容和旁路电容都是起到抗干扰的作用，由于电容所处的位置不同，所以名称有所差别。对于同一个电路来说，旁路（bypass）电容是把输入信号中的高频噪声作为滤除对象，把前级携带的高频杂波滤除，而去耦（decoupling）电容也称退耦电容，是把输出信号的干扰作为滤除对象。我们经常可以看到，在电源和地之间连接着去耦电容，它有三个方面的作用：一是作为本集成电路的蓄能电容；二是滤除该器件产生的高频噪声，切断其通过供电回路进行传播的通路；三是防止电源携带的噪声对电路构成干扰。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E6%97%81%E8%B7%AF%EF%BC%88%E5%8E%BB%E8%80%A6%EF%BC%89.png" alt="旁路去耦" title="旁路去耦"></p>
+<p>&emsp;&emsp;<strong>旁路</strong>：旁路电容是为本地器件提供能量的储能器件，它能使稳压器的输出均匀化，降低负载需求。就像小型可充电电池一样，旁路电容能够被充电，并向器件进行放电。为尽量减少阻抗，旁路电容要尽量靠近负载器件的供电电源管脚和地管脚。这能够很好地防止输入值过大而导致的地电位抬高和噪声。地电位是地连接处在通过大电流毛刺时的电压降。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E6%97%81%E8%B7%AF.png" alt="旁路" title="旁路"></p>
+<p>&emsp;&emsp;<strong>去耦</strong>：又称解耦。从电路来说，总是可以区分为驱动的源和被驱动的负载。如果负载电容比较大，驱动电路要把电容充电、放电，才能完成信号的跳变，在上升沿比较陡峭的时候，电流比较大，这样驱动的电流就会吸收很大的电源电流，由于电路中的电感，电阻（特别是芯片管脚上的电感）会产生反弹，这种电流相对于正常情况来说实际上就是一种噪声，会影响前级的正常工作，这就是所谓的“耦合”。</p>
+<p>&emsp;&emsp;<strong>3.耦合</strong>：作为两个电路之间的连接，允许交流信号通过并传输到下一级电路。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E8%80%A6%E5%90%881.png" alt="耦合" title="耦合"></p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E8%80%A6%E5%90%882.png" alt="耦合电路图" title="耦合电路图"></p>
+<p>&emsp;&emsp;用电容做耦合的元件，是为了将前级信号传递到后一级，并且隔断前一级的直流对后一级的影响，使电路调试简单，性能稳定。如果不加电容交流信号放大不会改变，只是各级工作点需重新设计，由于前后级影响，调试工作点非常困难，在多级时几乎无法实现。</p>
+<p>&emsp;&emsp;<strong>4.滤波</strong>：从理论上（即假设电容为纯电容）说，电容越大，阻抗越小，通过的频率也越高。但实际上超过1μF 的电容大多为电解电容，有很大的电感成份，所以频率高后反而阻抗会增大。有时会看到有一个电容量较大电解电容并联了一个小电容，这时大电容滤低频，小电容滤高频。电容的作用就是通交流隔直流，通高频阻低频。电容越大高频越容易通过。具体用在滤波中，大电容（1000μF）滤低频，小电容（20pF）滤高频。曾有网友形象地将滤波电容比作“水塘”。由于电容的两端电压不会突变，由此可知，信号频率越高则衰减越大，可很形象的说电容像个水塘，不会因几滴水的加入或蒸发而引起水量的变化。它把电压的变动转化为电流的变化，频率越高，峰值电流就越大，从而缓冲了电压。滤波就是充电，放电的过程。</p>
+<p>&emsp;&emsp;滤波对电路而言很重要，CPU背后的电容基本都是这个作用。即频率f越大，电容的阻抗Z越小。当低频时，电容C由于阻抗Z比较大，有用信号可以顺利通过；当高频时，电容C由于阻抗Z已经很小了，相当于把高频噪声短路到GND上去了。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E6%BB%A4%E6%B3%A2.png" alt="滤波" title="滤波"></p>
+<p>&emsp;&emsp;<strong>5.温度补偿</strong>：针对其它元件对温度的适应性不够带来的影响而进行补偿，改善电路的稳定性。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E6%B8%A9%E5%BA%A6%E8%A1%A5%E5%81%BF.png" alt="温度补偿" title="温度补偿"></p>
+<p>&emsp;&emsp;分析：由于定时电容的容量决定了行振荡器的振荡频率，所以要求定时电容的容量非常稳定，不随环境湿度变化而变化，这样才能使行振荡器的振荡频率稳定。因此采用正、负温度系数的电容释联，进行温度互补。</p>
+<p>&emsp;&emsp;当工作温度升高时，Cl的容量在增大，而C2的容量在减小，两只电容并联后的总容量为两只电容容量之和，由于一个容量在增大而另一个在减小，所以总容量基本不变。</p>
+<p>&emsp;&emsp;同理，在温度降低时，一个电容的容量在减小而另一个在增大，总的容量基本不变，稳定了振荡频率，实现温度补偿目的。</p>
+<p>&emsp;&emsp;<strong>6.计时</strong>：电容器与电阻器配合使用，确定电路的时间常数。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E8%AE%A1%E6%97%B6.png" alt="计时" title="计时"></p>
+<p>&emsp;&emsp;输入信号由低向高跳变时，经过缓冲1后输入RC电路。电容充电的特性使B点的信号并不会跟随输入信号立即跳变，而是有一个逐渐变大的过程。当变大到一定程度时，缓冲2翻转，在输出端得到了一个延迟的由低向高的跳变。</p>
+<p>&emsp;&emsp;<strong>7.调谐</strong>：对与频率相关的电路进行系统调谐，比如手机、收音机、电视机    </p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E8%B0%83%E8%B0%90.png" alt="调谐" title="调谐"></p>
+<p>&emsp;&emsp;变容二极管的调谐电路:因为lc调谐的振荡电路的谐振频率是lc的函数，我们发现振荡电路的最大与最小谐振频率之比随着电容比的平方根变化。此处电容比是指反偏电压最小时的电容与反偏电压最大时的电容之比。因而，电路的调谐特征曲线（偏压一谐振频率）基本上是一条抛物线。</p>
+<p>&emsp;&emsp;<strong>8.整流</strong>：在预定的时间开或者关半闭导体开关元件。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E6%95%B4%E6%B5%811.png" alt="整流" title="整流"><br>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E6%95%B4%E6%B5%812.png" alt="整流波形" title="整流波形"></p>
+<p>&emsp;&emsp;<strong>9.储能</strong>：储存电能，用于必须要的时候释放。例如相机闪光灯，加热设备等等．（如今某些电容的储能水平己经接近锂电池的水准，一个电容储存的电能可以供一个手机使用一天。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/201808/dianrong%E5%82%A8%E8%83%BD.png" alt="储能" title="储能"></p>
+<h4 id="电容的种类"><a href="#电容的种类" class="headerlink" title="电容的种类"></a>电容的种类</h4><p>&emsp;&emsp;按照<strong>结构</strong>分三大类：固定电容器、可变电容器和微调电容器。</p>
+<p>&emsp;&emsp;半可变电容：也叫做微调电容。它是由两片或者两组小型金属弹片，中间夹着介质制成。调节的时候改变两片之间的距离或者面积。它的介质有空气、陶瓷 瓷、云母、薄膜等。</p>
+<p>&emsp;&emsp;可变电容：它由一组定片和一组动片组成，它的容量随着动片的转动可以连续改变。把两组可变电容装在一起同轴转动，叫做双连。可变电容的介质有空 气和聚苯乙烯两种。空气介质可变电容体积大，损耗小，多用在电子管收音机中。聚苯乙烯介质可变电容做成密封式的，体积小，多用在晶体管 收音机中。</p>
+<p>&emsp;&emsp;按<strong>用途</strong>分有：高频旁路、低频旁路、滤波、调谐、高频耦合、低频耦合、小型电容器。</p>
+<p>&emsp;&emsp;按介质分为：陶瓷、云母、纸质、薄膜、电解电容。</p>
+<p>&emsp;&emsp;陶瓷电容：以高介电常数、低损耗的陶瓷材料为介质，体积小，电感小。</p>
+<p>&emsp;&emsp;云母电容：以云母片作介质的电容器。性能优良，高稳定，高精密。</p>
+<p>&emsp;&emsp;纸质电容：纸介电容器的电极用铝箔或锡箔做成，绝缘介质是浸蜡的纸，相叠后卷成圆柱体，外包防潮物质，有时外壳采用密封的铁的纸，相叠后卷成圆柱体，外包防潮物质，有时外壳采用密封的铁壳以提高防潮性。价格低，容量大。壳以提高防潮性。价格低，容量大。</p>
+<p>&emsp;&emsp;薄膜电容：用聚苯乙烯、聚四氟乙烯或涤纶等有机薄膜代替纸介质，做成的各种电容器。体积小，但损耗大，不稳定。 质，做成的各种电容器。体积小，但损耗大，不稳定。</p>
+<p>&emsp;&emsp;电解电容：以铝、担、锯、钛等金属氧化膜作介质的电容器。容量大，稳定性差。（使用时应注意极性） 大，稳定性差。（使用时应注意极性）</p>
+<p>&emsp;&emsp;根据<strong>极性</strong>可分：为有极性电容和无极性电容，有极性使用时要注意方向。</p>
+<p>&emsp;&emsp;电容的种类可以从<strong>原理</strong>上分为：无极性可变电容、无极性固定电容、有极性电容等，从材料上可以分为：CBB电容（聚乙烯），涤纶电容、瓷片电容、云母电容、独石电容、电解电容、钽电容。</p>
+<p>&emsp;&emsp;<strong>多层陶瓷电容（MLCC）</strong>：对于电容而言，小型化和高容量是永恒不变的发展趋势。其中，要数多层陶瓷电容（MLCC）的发展最快。小型化、高速度和高性能、耐高温条件、高可靠性已成为陶瓷电容的关键特性。陶瓷电容的容量随直流偏置电压的变化而变化。直流偏置电压降低了介电常数， 因此需要从材料方面，降低介电常数对电压的依赖，优化直流偏置电压特性。</p>
+<h4 id="电容器检测"><a href="#电容器检测" class="headerlink" title="电容器检测"></a>电容器检测</h4><p>&emsp;&emsp;a、脱离线路时检测：采用万用表Ｒ&TImes;１ｋ挡，在检测前，先将电解电容的两根引脚相碰，以便放掉电容内残余的电荷。当表笔刚接通时，表针向右偏转一个角度，然后表针缓慢地向左回转，最后表针停下。表针停下来所指示的阻值为该电容的漏电电阻，此阻值愈大愈最好应接近无穷大处。如果漏电电阻只有几十千欧，说明这一电解电容漏电严重。表针向右摆动的角度越大（表针还应该向左回摆），说明这一电解电容的电容量也越大，反之说明容量越小。</p>
+<p>&emsp;&emsp;b、线路上直接检测：主要是检测电容器是否已开路或已击穿这两种明显故障，而对漏电故障由于受外电路的影响一般是测不准的。用万用表Ｒ&TImes;１挡，电路断开后，先放掉残存在电容器内的电荷。测量时若表针向右偏转，说明电解电容内部断路。如果表针向右偏转后所指示的阻值很小（接近短路），说明电容器严重漏电或已击穿。如果表针向右偏后无回转，但所指示的阻值不很小，说明电容器开路的可能很大，应脱开电路后进一步检测。</p>
+<p>&emsp;&emsp;c、线路上通电状态时检测：若怀疑电解电容只在通电状态下才存在击穿故障，可以给电路通电，然后用万用表直流挡测量该电容器两端的直流电压，如果电压很低或为０Ｖ，则是该电容器已击穿。　对于电解电容的正、负极标志不清楚的，必须先判别出它的正、负极。对换万用表笔测两次，以漏电大（电阻值小）的一次为准，黑表笔所接一脚为负极，另一脚为正极。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Capacitance/" rel="tag"># Capacitance</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/22/运营商网络制式频段信道/" rel="next" title="运营商网络制式频段信道">
+                <i class="fa fa-chevron-left"></i> 运营商网络制式频段信道
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/08/多层陶瓷电容-MLCC/" rel="prev" title="多层陶瓷电容(MLCC)">
+                多层陶瓷电容(MLCC) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/logo.jpg"
+                alt="Jacktao" />
+            
+              <p class="site-author-name" itemprop="name">Jacktao</p>
+              <p class="site-description motion-element" itemprop="description">zhangt@dw.gdbbk.com</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定义"><span class="nav-number">2.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#单位及转换"><span class="nav-number">3.</span> <span class="nav-text">单位及转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计算公式"><span class="nav-number">4.</span> <span class="nav-text">计算公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#电容的工作原理"><span class="nav-number">5.</span> <span class="nav-text">电容的工作原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#电容的作用"><span class="nav-number">6.</span> <span class="nav-text">电容的作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#电容的种类"><span class="nav-number">7.</span> <span class="nav-text">电容的种类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#电容器检测"><span class="nav-number">8.</span> <span class="nav-text">电容器检测</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">true</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
