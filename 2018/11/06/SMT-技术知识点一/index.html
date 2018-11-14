@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml" />
+
+
+
+  <meta name="keywords" content="SMT Technological," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="SMD与NSMD区别">
+<meta name="keywords" content="SMT Technological">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SMT 技术知识点一">
+<meta property="og:url" content="https://jacktaoz.github.io/2018/11/06/SMT-技术知识点一/index.html">
+<meta property="og:site_name" content="Jacktao&#39;s Blog">
+<meta property="og:description" content="SMD与NSMD区别">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMTSMDNSMD.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMT%E9%94%A1%E7%90%83.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMT%E5%8F%A0%E5%B1%82%E7%BB%93%E6%9E%84.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMT%E9%92%A2%E7%BD%91.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMT%E5%AF%BC%E5%AD%94.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMT%E8%8F%8A%E8%8A%B1%E9%93%BE%E5%8E%9F%E7%90%86.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMT%E8%8F%8A%E8%8A%B1%E9%93%BE.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/153%E5%AF%BC%E7%BA%BF%E5%BC%80%E7%AA%97%E7%94%A8%E9%80%94%E4%B8%80.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/153%E5%AF%BC%E7%BA%BF%E5%BC%80%E7%AA%97%E7%94%A8%E9%80%94%E4%BA%8C.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/%E9%87%91%E6%89%8B%E6%8C%87.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMT%E4%B8%9D%E5%8D%B0%E5%B1%82%E5%86%99%E5%AD%97.png">
+<meta property="og:updated_time" content="2018-11-14T07:08:41.407Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SMT 技术知识点一">
+<meta name="twitter:description" content="SMD与NSMD区别">
+<meta name="twitter:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMTSMDNSMD.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://jacktaoz.github.io/2018/11/06/SMT-技术知识点一/"/>
+
+
+
+
+
+  <title>SMT 技术知识点一 | Jacktao's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jacktao's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">出走半生，仍是少年</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jacktaoz.github.io/2018/11/06/SMT-技术知识点一/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jacktao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jacktao's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">SMT 技术知识点一</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-06T16:12:56+08:00">
+                2018-11-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/SMT-Technological-Process/" itemprop="url" rel="index">
+                    <span itemprop="name">SMT Technological Process</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="SMD与NSMD区别"><a href="#SMD与NSMD区别" class="headerlink" title="SMD与NSMD区别"></a>SMD与NSMD区别</h4><a id="more"></a>
+<p>&emsp;&emsp;SMD:solder maste define PAD；</p>
+<p>&emsp;&emsp;NSMD：none solder maste define PAD 又名copper define PAD；</p>
+<p>&emsp;&emsp;两者的差别: 是一个是绿油覆盖形成焊盘,  而NSMD则是单独的焊盘;焊盘与绿油之间有小”沟”.一般情况下都是SMD, 只有01005, 或者0.4及以下BGA才会用到NSMD。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMTSMDNSMD.png" alt="SMD与NSMD区别" title="SMD与NSMD区别"></p>
+<ul>
+<li>SMD 焊盘形状规整，不受走线的影响，适用于小零件焊盘，如0402,0201,01005。NSMD焊盘形状受走线影响，有可能会出现同一个chip两端焊盘面积不同。</li>
+<li>SMD焊盘在维修时不容易脱落，因为除了和基材的连接外，还被阻焊层的附着力向下压着NSMD焊盘相对来说在维修过程中容易脱落。</li>
+<li>就焊接牢固性来说，NSMD强于SMD，因为NSMD是3~5面焊接。</li>
+<li>通常来说如果受到外力，SMD是焊点和Pad断， NSMD是焊盘和基材断。<br>个人建议，小零件（尺寸小于0402的零件）用SMD设计，其他用NSMD设计，因为NSMD设计相对简单些。 BGA用混装，功能pin用SMD设计，固定pin用NSMD设计。</li>
+</ul>
+<h4 id="SMD与NSMD优缺点"><a href="#SMD与NSMD优缺点" class="headerlink" title="SMD与NSMD优缺点"></a>SMD与NSMD优缺点</h4><p>&emsp;&emsp;SMD优点:pad可承受较高的应力，SMD缺点:焊接面仅在pad上方,故solder joint可靠度表現较差, 绿漆高度亦会影响solder joint之形狀。</p>
+<p>&emsp;&emsp;NSMD优点:焊接面含盖pad上方及边缘,故solder joint可靠度较佳，solder joint较完整。NSMD缺点:pad对外力冲击承受力较弱。find pitch及high pin count产品时PCB制做难度高。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMT%E9%94%A1%E7%90%83.png" alt="SMD与NSMD焊点" title="SMD与NSMD焊点"></p>
+<h4 id="焊盘的选择"><a href="#焊盘的选择" class="headerlink" title="焊盘的选择"></a>焊盘的选择</h4><p>&emsp;&emsp;阻焊层限定(Solder-Mask Defined，SMD)：阻焊层开口小于金属焊盘。电路板设计者定义形状代码、位置和焊盘的额定尺寸；焊盘开口的实际尺寸是由 阻焊层制作者 控制的。阻焊层一般为LPI (可成像液体感光胶)的。</p>
+<p>&emsp;&emsp;非阻焊层限定(Non-Solder-Mask Defined，NSMD)：阻焊层开口大于金属焊盘。在表层布线电路板的NSMD焊盘上，印刷电路导线的一部分将会受到焊锡的浸润。</p>
+<p>&emsp;&emsp;焊盘的选择：阻焊层限定(SMD)与非阻焊层限定(NSMD），电路板设计者必需考虑到功率、接地和信号走向的要求，在NSMD与SMD焊盘之间选择一种。特殊的微过孔设计可能避免了表面走线，但是需要更先进的制板技术。一旦选定，UCSP焊盘类型就不能混合使用。焊盘和与其连接的导线的布局应该对称以防止偏离中心的浸润力。</p>
+<h4 id="阻焊层和助焊层的区别"><a href="#阻焊层和助焊层的区别" class="headerlink" title="阻焊层和助焊层的区别"></a>阻焊层和助焊层的区别</h4><p>&emsp;&emsp;阻焊层：英文名- solder mask，也叫开窗层、绿油层。它是指pcb上要铺绿油的地方，而这阻焊层使用的是负片输出，所以在阻焊层的形状映射到板子上以后，并不是上了绿油阻焊，反而是露出了铜皮。露出铜皮，我们会习惯性叫开窗。阻焊层主要是起到防止pcb铜箔直接暴露的空气中，起到保护的作用。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMT%E5%8F%A0%E5%B1%82%E7%BB%93%E6%9E%84.png" alt="叠层结构" title="叠层结构"></p>
+<p>&emsp;&emsp;助焊层：英文名- paste mask，助焊层其实就是钢网，助焊层是用来给钢网厂做钢网用的，而钢网是在上锡的时候可以准确的将锡膏放到需要焊接的贴片焊盘上。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMT%E9%92%A2%E7%BD%91.png" alt="钢网" title="钢网"></p>
+<h4 id="通孔、盲孔、埋孔的区别"><a href="#通孔、盲孔、埋孔的区别" class="headerlink" title="通孔、盲孔、埋孔的区别"></a>通孔、盲孔、埋孔的区别</h4><p>&emsp;&emsp;通孔：Plating Through Hole 简称PTH，这是最常见到的一种，你只要把PCB拿起来对着灯光，可以看到亮光的孔就是「通孔」。这也是最简单的一种孔，因为制作的时候只要使用钻头或雷射直接把电路板做全钻孔就可以了，费用也就相对较便宜。可是相对的，有些电路层并不需要连接这些通孔，比如说我们有一栋六层楼的房子，我买了它的三楼跟四楼，我想要在内部设计一个楼梯只连接三楼跟四楼之间就可以，对我来说四楼的空间无形中就被原本的一楼连接到六楼的楼梯给多用掉了一些空间。所以通孔虽然便宜，但有时候会多用掉一些PCB的空间。</p>
+<p>&emsp;&emsp;盲孔：Blind Via Hole，将PCB的最外层电路与邻近内层以电镀孔连接，因为看不到对面，所以称为「盲通」。 为了增加PCB电路层的空间利用，应运而生「盲孔」制程。这种制作方法就需要特别注意钻孔的深度(Z轴)要恰到好处，不可此法经常会造成孔内电镀困难所以几乎以无厂商采用；也可以事先把需要连通的电路层在个别电路层的时候就先钻好孔，最后再黏合起来，可是需要比较精密的定位及对位装置。</p>
+<p>&emsp;&emsp;埋孔：Buried hole， PCB内部任意电路层的连接但未导通至外层。这个制程无法使用黏合后钻孔的方式达成，必须要在个别电路层的时候就执行钻孔，先局部黏合内层之后还得先电镀处理，最后才能全部黏合，比原来的「通孔」及「盲孔」更费工夫，所以价钱也最贵。 这个制程通常只使用于高密度(HDI)电路板，来增加其他电路层的可使用空间。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMT%E5%AF%BC%E5%AD%94.png" alt="导孔" title="导孔"></p>
+<h4 id="CET"><a href="#CET" class="headerlink" title="CET"></a>CET</h4><p>&emsp;&emsp;CTE是指热膨胀系数。它描述了一个PCB受热或冷却时膨胀的一个百分率，部分材料是反增长的，即温度上升时它们收缩，但是大多数都是受热后有一个小幅度的膨胀。膨胀是以每摄氏度每百万分之几来描述的。（ppm/C）。</p>
+<p>&emsp;&emsp;一个PCB每百万横向或纵向膨胀14。这表示如果一块PCB长1百万英寸的话，温度每升高一度，它膨胀14英寸。一块典型的FR-4层压板的CTE是14到17ppm/C。直到我们考虑到我们焊接到PCB上的大型硅芯片的CTE是6ppm/C。膨胀率差异足够了，尤其是在更大的BGA封装上，当PCB和芯片加热，PCB会比芯片封装膨胀更剧烈，使焊点从芯片上脱落。</p>
+<p>&emsp;&emsp;当选择层压板时，我们关注规格参数：Tg，Td，Dk和DF，都是很重要的，相互影响。</p>
+<ul>
+<li>Tg：玻璃转换温度，温度一旦高于Tg，物理特性变化非常明显，如同玻璃加热软化，特别是CTE增长很快</li>
+<li>Td：分解温度，一般按照重量减少5％的温度作为分解温度，但目前如COOKSON等研究表明，对于无铅，采用5％不行，如某一PCB材料5％的温度达到340度左右，但无法承受无铅250度的温度，目前倾向于2％来衡量。</li>
+<li>DK：介电常数(Dk)必须小而且很稳定，通常是越小越好信号的传送速率与材料介电常数的平方根成反比，高介电常数容易造成信号传输延迟。</li>
+<li>DF：介质损耗(Df)必须小，这主要影响到信号传送的品质，介质损耗越小使信号损耗也越小。</li>
+</ul>
+<p>&emsp;&emsp;<strong>品质级别从低到高划分如下：94HB——94VO——22F——CEM-1——CEM-3——FR-4</strong></p>
+<ul>
+<li>94HB：普通纸板，不防火（最低档的材料，模冲孔，不能做电源板）</li>
+<li>94V0：阻燃纸板（模冲孔）</li>
+<li>22F：单面半玻纤板（模冲孔）</li>
+<li>CEM-1：单面玻纤板（必须要电脑钻孔，不能模冲）</li>
+<li>CEM-3：双面半玻纤板（除双面纸板外属于双面板最低端的材料，简单的双面板可以用这种料，比FR-4会便宜5~10元/平米）</li>
+<li>FR-4: 双面玻纤板</li>
+</ul>
+<p>&emsp;&emsp;当我们为了降低CTE选择层压板时，会发现所有的FR-4型号的CTE值都差不多，然而大部分要是用在大型硅封装上的话都太高（14ppm/C），这意味着我们需要寻找一个不同的方法来控制CTE，通过为金属、Kevlar和Aramid核心设计接头，这三个低CTE的材料经常被采用在FR-4外层上，来制造低CTE电路板。</p>
+<p>&emsp;&emsp;两种使用最广泛的金属核心用铜-不胀钢-铜（CIC）和铜-钼-铜（CMC）来做，通常为6mil厚。在外层金属上的铜使我们可以在普通FR-4半固化片和核芯上进行层压。它们的CTE值分别为8ppm/C和6ppm/C。金属芯用于锚固FR-4外层，整体CTE值分别是12ppm/C和9ppm/C。</p>
+<p>&emsp;&emsp;同样，我们也可以用Kevlar Thermount或一个Aramid层压作为核心材料；它们的低CTE值为7到8ppm/C，和标准FR-4外层配合使用后的CTE值为12ppm/C。在多层生产中，低CTE层压核心代替典型的FR-4核心。有趣的是，CTE实际Kevlar纤维具有负热膨胀系数，采用环氧树脂将它们粘合在一起产生一个正热膨胀系数。</p>
+<p>&emsp;&emsp;使用低CTE层压，最昂贵的是金属核心，因为Kevlar和Aramid纤维层压。过去，Arlon Kevlar Thermount是很难获得的，但是新的生产增加了它的产量。所有的低CTE核心都很难钻孔和生产，但这是唯一达到大型硅封装要求的6-9CTE的方法。除了控制CTE，金属核心PCB还可以用于改善高功率热转换。请记住，金属膨胀需要比FR-4层大得多的能力；金属核心控制CTE，比Kevlar可以改变更多的FR-4层。</p>
+<h4 id="菊花链器件"><a href="#菊花链器件" class="headerlink" title="菊花链器件"></a>菊花链器件</h4><p>&emsp;&emsp;在一般可靠性测试中会经常用有菊花链(Daisy Chain)的设计器件。</p>
+<ul>
+<li>菊花链器件的外型、用料跟原有真实的器件是一样。所以测试的<br>结果能反映真实器件的可靠性。</li>
+<li>当菊花链器组装在有对应菊花链设计的线路板上时，焊点是串连<br>一起。在测试的过程中,可透过量度菊花链的电阻从而监测器件<br>的状况。</li>
+<li>当器件焊点失效时,菊花链的电阻会上升。</li>
+</ul>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMT%E8%8F%8A%E8%8A%B1%E9%93%BE%E5%8E%9F%E7%90%86.png" alt="菊花链原理" title="菊花链原理"></p>
+<p>&emsp;&emsp;常用菊花链电阻监测设备有:</p>
+<ul>
+<li>数据采集器 (Data Logger): 把测试过程中菊花链的电阻值按设定<br>完全记录下来。</li>
+<li>探测器 (Event Detector): 把测试过程中菊花链的电阻高于设定值<br>的时间记录下来。</li>
+</ul>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMT%E8%8F%8A%E8%8A%B1%E9%93%BE.png" alt="菊花链" title="菊花链"></p>
+<h4 id="开窗"><a href="#开窗" class="headerlink" title="开窗"></a>开窗</h4><p>&emsp;&emsp;开窗是个专业术语，你可以简单的理解为“去掉绿油，把铜皮裸露”。</p>
+<p>&emsp;&emsp;导线开窗用途一：例如这个板子中的蛇形天线，就是导线开窗后的效果。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/153%E5%AF%BC%E7%BA%BF%E5%BC%80%E7%AA%97%E7%94%A8%E9%80%94%E4%B8%80.png" alt="蛇形天线" title="蛇形天线"></p>
+<p>&emsp;&emsp;导线开窗用途二：把需要过大电流的导线开窗，就可以镀锡加粗，以便通过大电流。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/153%E5%AF%BC%E7%BA%BF%E5%BC%80%E7%AA%97%E7%94%A8%E9%80%94%E4%BA%8C.png" alt="镀锡加粗" title="镀锡加粗"></p>
+<p>&emsp;&emsp;导线开窗用途三：这种接口，叫做：金手指。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/%E9%87%91%E6%89%8B%E6%8C%87.png" alt="金手指" title="金手指"></p>
+<p>&emsp;&emsp;导线开窗用途四：这个电路板上的字，就是开窗后的效果，和直接用丝印层写字对比，显得更加高端，其实一点成本也不会增加。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMT%E4%B8%9D%E5%8D%B0%E5%B1%82%E5%86%99%E5%AD%97.png" alt="丝印层写字" title="丝印层写字"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/SMT-Technological/" rel="tag"># SMT Technological</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/05/SMT工艺流程/" rel="next" title="SMT工艺流程">
+                <i class="fa fa-chevron-left"></i> SMT工艺流程
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/11/FOG邦定工艺及其不良分析/" rel="prev" title="FOG邦定工艺及其不良分析">
+                FOG邦定工艺及其不良分析 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/logo.jpg"
+                alt="Jacktao" />
+            
+              <p class="site-author-name" itemprop="name">Jacktao</p>
+              <p class="site-description motion-element" itemprop="description">zhangt@dw.gdbbk.com</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#SMD与NSMD区别"><span class="nav-number">1.</span> <span class="nav-text">SMD与NSMD区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SMD与NSMD优缺点"><span class="nav-number">2.</span> <span class="nav-text">SMD与NSMD优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#焊盘的选择"><span class="nav-number">3.</span> <span class="nav-text">焊盘的选择</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#阻焊层和助焊层的区别"><span class="nav-number">4.</span> <span class="nav-text">阻焊层和助焊层的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通孔、盲孔、埋孔的区别"><span class="nav-number">5.</span> <span class="nav-text">通孔、盲孔、埋孔的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CET"><span class="nav-number">6.</span> <span class="nav-text">CET</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#菊花链器件"><span class="nav-number">7.</span> <span class="nav-text">菊花链器件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开窗"><span class="nav-number">8.</span> <span class="nav-text">开窗</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">true</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

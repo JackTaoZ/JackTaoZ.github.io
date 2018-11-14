@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml" />
+
+
+
+  <meta name="keywords" content="SMT Technological," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="SMT表面贴装技术介绍&amp;emsp;&amp;emsp;SMT是Surface Mount Technology 的缩写，是目前电子制造业采用最为普遍的一种电子元器件的表面贴装工艺。它是将表面贴装元器件贴装在涂布有锡膏或者助焊剂的焊接金属焊盘表面上，然后再进行高温回流形成焊点的焊接工艺。">
+<meta name="keywords" content="SMT Technological">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SMT工艺流程">
+<meta property="og:url" content="https://jacktaoz.github.io/2018/11/05/SMT工艺流程/index.html">
+<meta property="og:site_name" content="Jacktao&#39;s Blog">
+<meta property="og:description" content="SMT表面贴装技术介绍&amp;emsp;&amp;emsp;SMT是Surface Mount Technology 的缩写，是目前电子制造业采用最为普遍的一种电子元器件的表面贴装工艺。它是将表面贴装元器件贴装在涂布有锡膏或者助焊剂的焊接金属焊盘表面上，然后再进行高温回流形成焊点的焊接工艺。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/dianrongIMG_20181106_222654.jpg">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMT%E5%8F%8C%E9%9D%A2%E6%9D%BF%E5%9B%9E%E6%B5%81%E7%84%8A%E6%8E%A5.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMT%E5%8F%8C%E9%9D%A2%E6%B7%B7%E8%A3%85%E5%B7%A5%E8%89%BA%E6%B5%81%E7%A8%8B%E5%9B%BE.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMT%E4%B8%AD%E8%8B%B1%E6%96%87%E8%AF%86%E5%88%AB.png">
+<meta property="og:image" content="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMT%E6%89%8B%E6%9C%BA%E6%B5%8B%E8%AF%95%E7%AB%99%E4%BD%8D%E6%B5%8B%E8%AF%95%E9%A1%B9%E6%98%8E%E7%BB%86.png">
+<meta property="og:updated_time" content="2018-11-14T07:08:14.470Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SMT工艺流程">
+<meta name="twitter:description" content="SMT表面贴装技术介绍&amp;emsp;&amp;emsp;SMT是Surface Mount Technology 的缩写，是目前电子制造业采用最为普遍的一种电子元器件的表面贴装工艺。它是将表面贴装元器件贴装在涂布有锡膏或者助焊剂的焊接金属焊盘表面上，然后再进行高温回流形成焊点的焊接工艺。">
+<meta name="twitter:image" content="http://pdfyq8fr4.bkt.clouddn.com/dianrongIMG_20181106_222654.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://jacktaoz.github.io/2018/11/05/SMT工艺流程/"/>
+
+
+
+
+
+  <title>SMT工艺流程 | Jacktao's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jacktao's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">出走半生，仍是少年</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jacktaoz.github.io/2018/11/05/SMT工艺流程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jacktao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jacktao's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">SMT工艺流程</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-05T16:12:56+08:00">
+                2018-11-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/SMT-Technological-Process/" itemprop="url" rel="index">
+                    <span itemprop="name">SMT Technological Process</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="SMT表面贴装技术介绍"><a href="#SMT表面贴装技术介绍" class="headerlink" title="SMT表面贴装技术介绍"></a>SMT表面贴装技术介绍</h4><p>&emsp;&emsp;SMT是Surface Mount Technology 的缩写，是目前电子制造业采用最为普遍的一种电子元器件的表面贴装工艺。它是将表面贴装元器件贴装在涂布有锡膏或者助焊剂的焊接金属焊盘表面上，然后再进行高温回流形成焊点的焊接工艺。</p>
+<a id="more"></a>
+<p>&emsp;&emsp;SMT的组装包括<strong>组装材料，组装工艺及组装设备</strong>等几个方面。组装材料包括焊料、锡膏、助焊剂、清洗剂、固化剂等；组装工艺方面包括锡膏的涂布技术、元器件的贴装技术、回流焊及波峰焊技术、点胶固化技术、半成品成品的检测技术、测试技术等；组装设备包括锡膏涂布设备、贴装机、焊接设备、测试设备（SPI/AOI）等，如下图是某采用SMT和THT混装工艺的台式机主机版设备安排简图：</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/dianrongIMG_20181106_222654.jpg" alt="SMT工艺流程" title="SMT工艺流程"></p>
+<p>&emsp;&emsp;如下是采用SMT工艺进行双面板回流焊接的工艺示意图。在工艺的安排上主要以BGA等对制程工艺挑战较大的器件作为工艺安排的重心。这里是先在PCB板的一面(A 面)进行表面贴装，回流焊接形成焊点；之后再翻转PCB板，在PCB板的另一面(B 面)进行表面贴装，回流焊接形成焊点。此工艺是生产双面电路板的常用制造工艺。为了防止第二次回流焊过程中，由于焊点熔融可能发生的PCB底部元器件的掉落，那些自重较大、工艺难度高的贴装芯片、贴装插座接口等元器件要尽量安排在第二次回流工艺(B 面)上。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMT%E5%8F%8C%E9%9D%A2%E6%9D%BF%E5%9B%9E%E6%B5%81%E7%84%8A%E6%8E%A5.png" alt="双面板回流焊接" title="双面板回流焊接"></p>
+<p>&emsp;&emsp;典型的PCBA双面混装工艺流程图如下：<br>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMT%E5%8F%8C%E9%9D%A2%E6%B7%B7%E8%A3%85%E5%B7%A5%E8%89%BA%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="双面混装工艺流程图" title="双面混装工艺流程图"></p>
+<h4 id="常见的英文解释及缩写介绍"><a href="#常见的英文解释及缩写介绍" class="headerlink" title="常见的英文解释及缩写介绍"></a>常见的英文解释及缩写介绍</h4><p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMT%E4%B8%AD%E8%8B%B1%E6%96%87%E8%AF%86%E5%88%AB.png" alt="常见的英文解释" title="常见的英文解释"></p>
+<h4 id="SMT工艺流程"><a href="#SMT工艺流程" class="headerlink" title="SMT工艺流程"></a>SMT工艺流程</h4><p>&emsp;&emsp;<strong>1.供板</strong>：供板时首先需要确认印刷电路板的正确性，一般以PCB面丝印编号进行核对，同时还需要检查PCB有无破损，污渍和板屑等引致不良的现象。接着进行主板清洁，然后放入制作好的合成石载具进行固定，然后投入锡膏印刷机。</p>
+<p>&emsp;&emsp;<strong>2.印刷锡膏</strong>：此处最核心的三个物件就是：钢网、锡膏、刮刀，直接影响印刷质量。钢网的厚度、孔径大小、钢网的开孔方式（化学腐蚀/激光/电镀），刮刀的质量、角度、压力、分离速度等，锡膏的选型、储存环境、搅拌方式都将直接影响印刷效果。据不同丝印钢网，辅料(锡膏)和印刷要求质量等合理调校，锡膏平时保存于适温冰箱中，使用前从冰箱取出解冻至室温下方可开盖搅拌至均匀﹑流畅后投入使用。印刷后需检查锡膏是否均匀适量地印刷于 PCB 焊盘上，有无坍塌和散落于 PCB 面，确保回流焊接元器件良好，无锡珠散落于板面。</p>
+<p>&emsp;&emsp;<strong>3.SPI检查</strong>：锡膏印刷完后进行锡膏检查，SPI的参数设置尤为重要，确保锡膏的印刷质量得到有效的监控。SPI是3D锡膏测试设备，检测项目如少锡、漏锡、多锡、拉尖、面积、偏移等不良。</p>
+<p>&emsp;&emsp;<strong>4.贴装元器件</strong>：该过程主要为核对元器件是否准确，然后放入飞达，贴片机用吸嘴将元器件定位到主板上。贴装元器件主要控制元器件的正确性和贴装质量。</p>
+<ul>
+<li>元器件正确性的控制:使用正确型号和版本的排位表核对物料站位﹑物料名称﹑物料编号，全部一致方可将物料装于FEEDER上料于机组相应站位。以便与生产技术员所调用贴装程序匹配。这里元器件一定要区分是否有方向性。</li>
+<li>贴装质量的控制：生产技朮员依据客户品质标准调校机组贴装质量，生产线作业员全面检查，反馈贴装不良信息予生产技朮员，再次调校机组，直至达到客户品质标准。</li>
+</ul>
+<p>&emsp;&emsp;<strong>5.炉前AOI检查</strong>：AOI为高速高精度光学影像检测系统，运用机器视觉做为检测标准技术,主要检查元件偏位、缺件、反白、错件、立碑、侧立、飞件等缺陷。</p>
+<p>&emsp;&emsp;<strong>6.回流焊</strong>：对已贴装完元器件的半成品经生产线作业员检查后，需经回流焊接炉熔焊锡膏。回流焊接是使用锡膏的PCB某一贴装面将元器件与之焊接。回流焊接所需温度条件由PCB材质﹑PCB大小﹑元器件重量和锡膏型号类别等设定。在投入半成品前，需由生产技朮员确认炉温，指导放板密度和方向。此处的回流焊温度曲线尤为重要，一经过设定不允许轻易改动，每次生产时需要确保曲线差异在要求的范围之类。</p>
+<p>&emsp;&emsp;<strong>7.炉后AOI检查</strong>：回流焊之后可能还是存在不良，以及炉前检查未到位的地方再次检查一遍。生产线作业员依据客户品质标准,全面检查半成品质量状况,将不良点标识﹑数量记录,并及时反馈与生产管理员,相应及时联络生产技朮员﹑品质人员针对不良情况分析原因,作出改善控制。</p>
+<p>&emsp;&emsp;<strong>8.ICT检查</strong>：若客户要求对SMT半成品进行测试，确认元器件贴装质量和性能等时，需经ICT测试机对所有半成品进行测试。针对不良现象，相关部门需及时分析原因作出改善控制，并跟踪至完全改善。根据每一款机型，都需要制作相应的ICT测试工具，时间成本比较高，所以一般选择抽测避免批量性问题。</p>
+<p>&emsp;&emsp;<strong>9.下板</strong>：至此整个贴片过程走完，将PCBA从下板机取下放置入托盘开始后续测试。后续包括烧录、烧号、校准、综测、WBG、功能等。</p>
+<p>&emsp;&emsp;<strong>10.烧录</strong>：将原始系统程序烧录小机。</p>
+<p>&emsp;&emsp;<strong>11.烧号</strong>：将PCBA板上二维码烧入至芯片。</p>
+<p>&emsp;&emsp;<strong>12.校准综测</strong>：综测即手机的综合测试：大概测试发射功率，频率误差，相位误差，功率斜坡，调制谱（频率谱），切换谱，开关谱，灵敏度 （功率等级和信道一般选择高中低进行测试），BER，FER，RXL质等是否符合国标。校准：将上面的测试项目参数（以国标为标准）校正到最佳化，当然，能校准的精准度，取决于你校准手机线路的设计与硬件的选用配置。</p>
+<p>&emsp;&emsp;<strong>13.WBG测试</strong>：进行WIFI/Bluetooth/GPS相关的测试。</p>
+<p>&emsp;&emsp;<strong>14.功能测试</strong>：根据实际需要选择部分进行功能测试。</p>
+<p>&emsp;&emsp;<img src="http://pdfyq8fr4.bkt.clouddn.com/2018/08/SMT%E6%89%8B%E6%9C%BA%E6%B5%8B%E8%AF%95%E7%AB%99%E4%BD%8D%E6%B5%8B%E8%AF%95%E9%A1%B9%E6%98%8E%E7%BB%86.png" alt="手机测试站位测试项目明细" title="手机测试站位测试项目明细"></p>
+<p>&emsp;&emsp;<strong>15.包装</strong>：所有的测试流程走完，对生产完成品用符合客户要求的包装材料和方式进行正确包装，包装时，需注意不混入异机种半成品，不得损坏PCB 或PCB面元器件。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/SMT-Technological/" rel="tag"># SMT Technological</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/09/电容参数解读/" rel="next" title="电容参数解读">
+                <i class="fa fa-chevron-left"></i> 电容参数解读
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/06/SMT-技术知识点一/" rel="prev" title="SMT 技术知识点一">
+                SMT 技术知识点一 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/logo.jpg"
+                alt="Jacktao" />
+            
+              <p class="site-author-name" itemprop="name">Jacktao</p>
+              <p class="site-description motion-element" itemprop="description">zhangt@dw.gdbbk.com</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#SMT表面贴装技术介绍"><span class="nav-number">1.</span> <span class="nav-text">SMT表面贴装技术介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常见的英文解释及缩写介绍"><span class="nav-number">2.</span> <span class="nav-text">常见的英文解释及缩写介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SMT工艺流程"><span class="nav-number">3.</span> <span class="nav-text">SMT工艺流程</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">true</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
